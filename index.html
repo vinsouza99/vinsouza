@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <script src="./index.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Vin Souza</title>
+</head>
+<body>
+    <header class="dark-theme">
+        <div class="logo-wrapper">
+            <h1 class="visually-hidden">Vin Souza</h1>
+            <!--<object data="./assets/logo.svg" width="500" height="300"> </object>-->
+            <img src="./assets/logo.svg" alt="Logo">
+        </div>
+        <div class="toggle-menu-wrapper">
+            <button type="button" id="toggle-menu-btn">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                <span class="visually-hidden">Open menu</span>
+            </button>
+        </div>
+        <div class="menu-wrapper hidden">
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#extras">Extras</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" target="_blank" title="View my resume" id="resume-link">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="home" class="dark-theme">
+            <div class="text-wrapper">
+                <p>Hello, World!</p>
+                <h2>I'm <span>Vin</span></h2>
+                <p>and I’m a full-stack web developer :)</p>
+            </div>
+            <div class="social-links">
+                <nav class="contact-menu">
+                    <ul>
+                        <li>
+                            <a href="#" target="_blank" title="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                                <span class="visually-hidden">LinkedIn</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" title="Github">
+                                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                                <span class="visually-hidden">Github</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="other-info">
+                <div>
+                    <p><span>Location:</span> Vancouver, Canada</p>
+                    <p><span>Local Time:</span> <span id="localTime"></span></p>
+                </div>
+                <div class="skip-btn">
+                    <button id="skipBtn">Skip</button>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="dark-theme">
+            <div class="section-content">
+                <div class="grid-item">
+                    <h2>About</h2>
+                    <p>Well, my actual name is Vinícius [viˈnisjus], but Vin it's easier for most people. I'm a 25 years old brazilian computer scientist and full-stack web developer living in Vancouver, Canada.</p>
+                    <p>When I was about to try Law school, my dad took me on a private tour around the Computer Science campus of the university where he used to teach (he knew a guy) so I would hopefully reconsider that decision. He thought IT would fit me better than Law because I'm more "things-oriented" than "people-oriented" and because it is a rapidly growing field that would open doors to me worldwide, unlike Law. So I listened to him and gave it a try. Turns out he was right!</p>
+                    <p>During the Computer Science program I realised how fun the whole problem-solving aspect of programming is and how I liked the process of creating a website. So here I am!</p>
+                </div>
+                <div class="grid-item">
+                    <div class="img-wrapper">
+                        <img src="#" alt="Me, Myself and I">
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <section id="skills" class="dark-theme">
+            <div class="section-content">
+                <h2>Skills</h2>
+                <div class="grid-item skillset">
+                    <div class="wrapper">
+                        <p>In my short but intense journey on full-stack web development I studied and worked with some of the most popular languages, frameworks, tools and libraries on the market</p>
+                        <p>There is still so much to learn, so this list will keep growing!</p>
+                    </div>
+                    <div class="wrapper">
+                        <form action="#" class="tags">
+                            <label for="webFilter" class="tag">
+                                Web
+                                <input type="checkbox" id="webFilter" value="web" hidden>
+                            </label>
+                            <label for="mobileFilter" class="tag">
+                                Mobile
+                                <input type="checkbox" id="mobileFilter" value="mobile" hidden>
+                            </label>
+                            <label for="designFilter" class="tag">
+                                Design
+                                <input type="checkbox" id="designFilter" value="design" hidden>
+                            </label>
+                        </form>
+                        <div class="grid-wrapper">
+                            <div class="skills-grid">
+                                <button class="skill-item" tags="web">
+                                    <div class="img-wrapper">
+                                        <img src="./assets/images/html.svg" alt="HTML">
+                                    </div>
+                                    <span>HTML</span>
+                                </button>
+                                <button class="skill-item" tags="web">
+                                    <div class="img-wrapper">
+                                        <img src="./assets/images/css.svg" alt="CSS">
+                                    </div>
+                                    <span>CSS</span>
+                                </button>
+                                <button class="skill-item" tags="web">
+                                    <div class="img-wrapper">
+                                        <img src="./assets/images/js.svg" alt="JavaScript">
+                                    </div>
+                                    <span>JavaScript</span>
+                                </button>
+                                <button class="skill-item" tags="web">
+                                    <div class="img-wrapper">
+                                        <img src="./assets/images/java.svg" alt="Java">
+                                    </div>
+                                    <span>Java</span>
+                                </button>
+                                <button class="skill-item" tags="web">
+                                    <div class="img-wrapper">
+                                        <img src="./assets/images/python.svg" alt="Python">
+                                    </div>
+                                    <span>Python</span>
+                                </button>
+                                <button class="skill-item" tags="web">
+                                    <div class="img-wrapper">
+                                        <img src="./assets/images/csharp.svg" alt="C Sharp">
+                                    </div>
+                                    <span>C#</span>
+                                </button>
+                                <button class="skill-item" tags="web">
+                                    <div class="img-wrapper">
+                                        <img src="./assets/images/angular.svg" alt="Angular">
+                                    </div>
+                                    <span>Angular</span>
+                                </button>
+                                <button class="skill-item" tags="web">
+                                    <div class="img-wrapper">
+                                        <img src="./assets/images/react.svg" alt="React">
+                                    </div>
+                                    <span>React</span>
+                                </button>
+                                <button class="skill-item" tags="web">
+                                    <div class="img-wrapper">
+                                        <img src="./assets/images/node.svg" alt="Node JS">
+                                    </div>
+                                    <span>NodeJs</span>
+                                </button>
+                                <button class="skill-item" tags="web">
+                                    <div class="img-wrapper">
+                                        <img src="./assets/images/wordpress.svg" alt="Illustrator">
+                                    </div>
+                                    <span>Wordpress</span>
+                                </button>
+                                <button class="skill-item" tags="design">
+                                    <div class="img-wrapper">
+                                        <img src="./assets/images/figma.svg" alt="Figma">
+                                    </div>
+                                    <span>Figma</span>
+                                </button>
+                                <button class="skill-item" tags="design">
+                                    <div class="img-wrapper">
+                                        <img src="./assets/images/illustrator.svg" alt="Illustrator">
+                                    </div>
+                                    <span>Illustrator</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item portfolio">
+                    <div class="grid-wrapper">
+                        <div class="portfolio-grid">
+                            <div class="portfolio-item-container">
+                                <a href="https://yoshan0921.github.io/" target="_blank" class="portfolio-item card">
+                                    <div class="thumbnail-wrapper">
+                                        <img src="./assets/images/favr.png" alt="Item">
+                                    </div>
+                                    <div class="details">
+                                        <div class="title"><h3>Favr <i class="fa-solid fa-arrow-up-right-from-square"></i></h3><span class="type">Web</span></div>
+                                        <p class="description">Favr is a PWA that improves the life quality of senior citizens by connecting them with volunteer students</p>
+                                        <div class="tags">
+                                            <div class="tag" tags="web,html"><span>HTML</span></div>
+                                            <div class="tag" tags="web,css"><span>CSS</span></div>
+                                            <div class="tag" tags="web,javascript"><span>JavaScript</span></div>
+                                            <div class="tag" tags="web,firebase"><span>Firebase</span></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="portfolio-item-container">
+                                <a href="https://github.com/vinsouza99/TourOfHeroes" target="_blank" class="portfolio-item card">
+                                    <div class="thumbnail-wrapper">
+                                        <img src="./assets/images/react-calculator.png" alt="Item">
+                                    </div>
+                                    <div class="details">
+                                        <div class="title"><h3>Tour of Heroes<i class="fa-solid fa-arrow-up-right-from-square"></i></h3><span class="type">Web</span></div>
+                                        <p class="description">This is my first SPA with Angular. It is a wikipedia-like website about Marvel's characters and it was built based on the tutorial available on Angular's website.</p>
+                                        <div class="tags">
+                                            <div class="tag" tags="web,html"><span>HTML</span></div>
+                                            <div class="tag" tags="web,css"><span>CSS</span></div>
+                                            <div class="tag" tags="web,angular"><span>Angular</span></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="portfolio-item-container">
+                                <a href="https://github.com/vinsouza99/React-Calculator" target="_blank" class="portfolio-item card">
+                                    <div class="thumbnail-wrapper">
+                                        <img src="./assets/images/react-calculator.png" alt="Item">
+                                    </div>
+                                    <div class="details">
+                                        <div class="title"><h3>React Calculator <i class="fa-solid fa-arrow-up-right-from-square"></i></h3><span class="type">Web</span></div>
+                                        <p class="description">This is a simple calculator application built with React</p>
+                                        <div class="tags">
+                                            <div class="tag" tags="web,html"><span>HTML</span></div>
+                                            <div class="tag" tags="web,css"><span>CSS</span></div>
+                                            <div class="tag" tags="web,react"><span>React</span></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="portfolio-item-container">
+                                <a href="https://github.com/vinsouza99/React-Calculator" target="_blank" class="portfolio-item card">
+                                    <div class="thumbnail-wrapper">
+                                        <img src="./assets/images/react-calculator.png" alt="Item">
+                                    </div>
+                                    <div class="details">
+                                        <div class="title"><h3>React Calculator <i class="fa-solid fa-arrow-up-right-from-square"></i></h3><span class="type">Web</span></div>
+                                        <p class="description">This is a simple calculator application built with React</p>
+                                        <div class="tags">
+                                            <div class="tag"><span>HTML</span></div>
+                                            <div class="tag"><span>CSS</span></div>
+                                            <div class="tag"><span>React</span></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="portfolio-item-container">
+                                <a href="https://github.com/vinsouza99/React-Calculator" target="_blank" class="portfolio-item card">
+                                    <div class="thumbnail-wrapper">
+                                        <img src="./assets/images/react-calculator.png" alt="Item">
+                                    </div>
+                                    <div class="details">
+                                        <div class="title"><h3>React Calculator <i class="fa-solid fa-arrow-up-right-from-square"></i></h3><span class="type">Web</span></div>
+                                        <p class="description">This is a simple calculator application built with React</p>
+                                        <div class="tags">
+                                            <div class="tag"><span>HTML</span></div>
+                                            <div class="tag"><span>CSS</span></div>
+                                            <div class="tag"><span>React</span></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-more">
+                        <a href="https://github.com/vinsouza99">View more <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="experience" class="dark-theme">
+            <div class="section-content">
+                <div class="experience-grid">
+                    <div class="wrapper">
+                        <h2>Experience</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum quidem nostrum voluptas reiciendis officiis fuga, ut enim perspiciatis beatae molestiae?</p>
+                    </div>
+                    <div class="row item-4">
+                        <div class="experience-item-wrapper">
+                            <div class="experience-item">
+                                <div class="experience-type">
+                                    <div class="img-wrapper">
+                                        <img src="./assets/images/type-education.svg" alt="">
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="year">
+                                        <span>2024</span>
+                                    </div>
+                                </div>
+                                <div class="experience-details">
+                                    <h3 class="experience-name">Post Degree in Web Development</h3>
+                                    <h4 class="experience-place">Langara College, Canada</h4>
+                                    <p class="experience-description">Currently I'm pursuing the 18 months Post-Degree Diploma in Web and Mobile App Design & Development program with the expected graduation date being August 2025   </p>
+                                    <div class="tags">
+                                        <div class="tag">WordPress</div>
+                                        <div class="tag">UX/UI</div>
+                                        <div class="tag">Firebase</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="row item-3">
+                        <div class="experience-item-wrapper">
+                            <div class="experience-item">
+                                <div class="experience-type">
+                                    <div class="img-wrapper">
+                                        <img src="./assets/images/type-work.png" alt="">
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="year">
+                                        <span>2023</span>
+                                    </div>
+                                </div>
+                                <div class="experience-details">
+                                    <h3 class="experience-name">Backend Developer</h3>
+                                    <h4 class="experience-place">Wipro, Brazil</h4>
+                                    <p class="experience-description">Wipro Limited is one of the largest IT services, global information technology, consulting, and business process services company on the world. On their Brazilian branch I worked as a junior web developer with a higher focus on backend development with .NET</p>
+                                    <div class="tags">
+                                        <div class="tag">.NET</div>
+                                        <div class="tag">C#</div>
+                                        <div class="tag">scrum</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="row  item-2">
+                        <div class="experience-item-wrapper">
+                            <div class="experience-item">
+                                <div class="experience-type">
+                                    <div class="img-wrapper">
+                                        <img src="./assets/images/type-work.svg" alt="">
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="year">
+                                        <span>2021 - 2022</span>
+                                    </div>
+                                </div>
+                                <div class="experience-details">
+                                    <h3 class="experience-name">Web Development Intern</h3>
+                                    <h4 class="experience-place">Millennium IE, Brazil</h4>
+                                    <p class="experience-description">Millennium IE is a local printshop based on the same city I went to university. During my 10 months as an intern there I worked on several web apps maintained by the company as a full-stack web developer.</p>
+                                    <div class="tags">
+                                        <div class="tag">HTML</div>
+                                        <div class="tag">CSS</div>
+                                        <div class="tag">JSF</div>
+                                        <div class="tag">SQL</div>
+                                        <div class="tag">UX/UI</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="row item-1">
+                        <div class="experience-item-wrapper">
+                            <div class="experience-item">
+                                <div class="experience-type">
+                                    <div class="img-wrapper">
+                                        <img src="./assets/images/type-education.svg" alt="">
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="year">
+                                        <span>2018 - 2023</span>
+                                    </div>
+                                </div>
+                                <div class="experience-details">
+                                    <h3 class="experience-name">Bachelor in Computer Science</h3>
+                                    <h4 class="experience-place">UFCG, Brazil</h4>
+                                    <p class="experience-description">The UFCG Computer Science course is one of the oldest and most celebrated in the IT field throughout Brazil. The four years program taught me a little bit of everything about computers, and it helped me to discover my love for web development!</p>
+                                    <div class="tags">
+                                        <div class="tag">Java</div>
+                                        <div class="tag">Python</div>
+                                        <div class="tag">OOP</div>
+                                        <div class="tag">React</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="extras" class="dark-theme">
+            <div class="section-content">
+                <h2>Extras</h2>
+            </div>
+        </section>
+        <section id="contact" class="dark-theme">
+            <div class="section-content">
+                <h2>Contact</h2>
+            </div>
+        </section>
+    </main>
+    <footer class="dark-theme">
+        Vin Souza &copy; 2024
+    </footer>
+    
+</body>
+</html>
