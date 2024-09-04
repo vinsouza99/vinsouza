@@ -217,6 +217,12 @@ nav ul{
     display: grid;
     column-gap: 2rem;
 }
+.section-content > h2{
+    grid-row: 1;
+    grid-column: 1/-1;
+    margin: 0;
+    align-content: end;
+}
 .card{
     background-color: rgba(0, 116, 189, 0.1);
     border: thin solid rgba(0, 116, 189, 0.5);
@@ -252,7 +258,7 @@ nav ul{
     flex-flow: column;
     padding-top: 10vh;
 }
-#home .social-links nav ul li a{
+.social-links nav ul li a{
     font-size: 2rem;
     color: var(--secondaryColor);
 }
@@ -291,7 +297,7 @@ nav ul{
 #about .section-content{
     grid-template-columns: 1fr;
 }
-#about p {
+.section-description {
     font-weight: 200;
 }
 /*Skills*/
@@ -300,15 +306,7 @@ nav ul{
 }
 #skills .section-content{
     grid-template-columns: 1fr;
-}
-#skills h2{
-    grid-row: 1;
-    grid-column: 1/-1;
-    margin: 0;
-    align-content: end;
-}
-#skills p{
-    font-weight: 200;
+    row-gap: 2rem;
 }
 #skills .grid-item:first-child {
     display: grid;
@@ -322,9 +320,11 @@ nav ul{
 #skills form .tag:hover{
     cursor: pointer;
 }
+#skills form .tag:hover,
 #skills form .tag:has(input:checked){
     border-color: var(--accentColor);
     color: var(--accentColor);
+    cursor: pointer;
 }
 .skills-grid{
     display: grid;
@@ -501,7 +501,7 @@ nav ul{
 .experience-grid{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto repeat(4, 1fr);
+    grid-template-rows: repeat(5, auto);
     position: relative;
     row-gap: 2rem;
 }
@@ -549,6 +549,7 @@ nav ul{
     max-width: 5vw;
     min-width: 55px;
     background: var(--primaryColor);
+    background: rgb(0,30,54);background: -moz-radial-gradient(circle, rgba(0,30,54,1) 80%, rgba(0,30,54,0) 100%);background: -webkit-radial-gradient(circle, rgba(0,30,54,1) 80%, rgba(0,30,54,0) 100%);background: radial-gradient(circle, rgba(0,30,54,1) 80%, rgba(0,30,54,0) 100%);
     z-index: 2;
 }
 .experience-item .experience-details{
@@ -560,7 +561,7 @@ nav ul{
     left: calc(50px + 1.2rem);
     max-width: 75vw;
     width: 100%;
-    padding-bottom: 0;
+    padding-bottom: 1rem;
     transition: all .4s ease-in-out;
 }
 .experience-item :is(h3,h4){
@@ -589,6 +590,13 @@ nav ul{
     width: min-content;
     text-wrap: nowrap;
     overflow: visible;
+}
+/*Contact*/
+#contact .social-links ul{
+    display: flex;
+    justify-content: center;
+    margin:2rem 0;
+
 }
 @media screen and (min-width: 400px){
     .experience-item{
@@ -766,6 +774,8 @@ nav ul{
     .experience-grid > .wrapper{
         grid-column: 1 / -1;
         grid-row: 1;
+        position: relative;
+        bottom: -2.5rem;
     }
     .experience-item .experience-type{
         flex-flow: column wrap;
@@ -824,43 +834,49 @@ nav ul{
     .experience-grid .experience-details p{
         display: block;
         position: relative;
-        height: 10%;
+        height: 2rem;
         font-size: 1rem;
         max-width: 250px;
         overflow-y: hidden;
         transition: all .4s ease-in-out;
         padding: 0;
+        text-align: justify;
+        text-justify: distribute;
+        padding-right: 1.8rem;
     }
     .experience-grid .experience-details p::after{
-        content: "Details +";
-        text-transform: uppercase;
         display: inline-block;
-        font-style: normal;
-        font-variant: normal;
         text-rendering: auto;
         -webkit-font-smoothing: antialiased;
-        font-weight: 400;
-        letter-spacing: 1px;
+        font: var(--fa-font-solid);
+        content: "\f107";
+        font-size: 1.2rem;
+        overflow: visible;
+        text-align: right;
+        text-transform: uppercase;
         opacity: 100%;
         position: absolute;
         left: 0;
         right: 0;
-        bottom: -2px;
+        bottom: 0;
         top: 0;
-        /*background: linear-gradient(rgba(0, 30, 54, 0), rgba(0, 30, 54, 1));*/
-        background-color: var(--primaryColor);
+        background: linear-gradient(rgba(0, 30, 54, 0), rgba(0, 30, 54, 1));
         transition: all .2s ease-in-out;
-
     }
     .experience-grid .experience-details p.show {
         height: 100%;
         padding: initial;
+        padding-bottom: 1rem;
     }
     .experience-grid :is(.item-2, .item-4) .experience-details:has(p.show){
         padding-bottom: 3.5rem;
     }
     .experience-grid .experience-details p.show::after{
-        opacity: 0%;
+        opacity: 100%;
+        background: transparent;
+        align-content: end;
+        content: "\f106";
+        bottom: 0px;
     }
 
     .experience-grid :is(.item-1,.item-3) .experience-item-wrapper{
@@ -910,6 +926,9 @@ nav ul{
     }
 }
 @media screen and (min-width: 900px){
+
+}
+@media screen and (min-width: 1000px){
     .experience-grid{
         grid-template-rows: repeat(2, 1fr);
     }
@@ -923,20 +942,19 @@ nav ul{
         grid-column: 1 / 9;
         grid-row: 1/-1;
     }
+    .experience-grid .item-4{
+        grid-column: 8 / span 4;
+    } 
     .experience-grid > .wrapper{
         padding-right: .5rem;
         grid-column: 1/ span 3;
         grid-row: 1;
         align-self: center;
+        position: static;
     }
     .experience-grid > .wrapper h2{
         margin-top: 0;
     }
-    .experience-grid .item-4{
-        grid-column: 8 / span 4;
-    } 
-}
-@media screen and (min-width: 1000px){
     .experience-grid::after{
         grid-column: 1 / 10;
     }
