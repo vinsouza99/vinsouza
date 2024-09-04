@@ -114,21 +114,25 @@ footer{
     min-height: 10vh;
     color: var(--secondaryColor) !important;
 }
-#resume-link{
+#resume-link,
+#contact form .form-group button{
+    background-color: transparent;
     display: block;
-    border-radius: 50px;
+    border-radius: 5px;
     padding: .5rem 1rem;
     width: auto;
     text-align: center;
-    align-items: center;
+    font-weight: 400;
+    text-transform: uppercase;
     border: 2px solid;
     transition: all .2s ease-in-out;
     color: var(--accentColor);
 }
-#resume-link:hover{
+:is(#resume-link, #contact form .form-group button):hover{
     color: var(--tertiaryColor);
     background-color:rgb(0, 163, 153);
     border-color: var(--accentColor);
+    cursor: pointer;
 }
 
 /*Theme*/
@@ -259,12 +263,19 @@ nav ul{
     padding-top: 10vh;
 }
 .social-links nav ul li a{
-    font-size: 2rem;
+    display: flex;
+    gap: 1rem;
     color: var(--secondaryColor);
+    font-size: 1rem;
+    align-items: center;
+}
+.social-links i{
+    font-size: 2rem;
 }
 #home .social-links nav ul li a:hover{
     text-shadow: 0 0 5px var(--accentColor);
     color: var(--accentColor);
+    text-decoration: none !important;
 }
 #home .other-info{
     display: flex;
@@ -592,11 +603,54 @@ nav ul{
     overflow: visible;
 }
 /*Contact*/
+#contact .section-content{
+    position: relative;
+}
 #contact .social-links ul{
     display: flex;
-    justify-content: center;
+    flex-flow: row wrap;
+    justify-content: left;
+    align-content: flex-start;
     margin:2rem 0;
-
+}
+#contact .social-links ul li{
+    flex-basis: 100%;
+    display: flex;
+}
+#contact .social-links ul li a{
+   text-transform: none;
+}
+#contact form {
+    display: grid;
+    gap: 1rem;
+}
+#contact form label{
+    color: var(--lighterSecondaryColor);
+    font-weight: 500;
+}
+#contact form .form-group{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+#contact .social-links a:hover{
+    text-decoration: none !important;
+}
+#contact form .form-group :is(input, textarea){
+    background-color: var(--tertiaryColor);
+    color: var(--primaryColor);
+    border: none;
+    min-height: 5vh;
+    border-radius: 5px;
+    outline-color: var(--accentColor);
+    padding: .5rem;
+}
+#contact form .form-group textarea{
+    min-height: 25vh;
+    resize: vertical;
+}
+#contact form .form-group button{
+    align-self: end;
 }
 @media screen and (min-width: 400px){
     .experience-item{
@@ -923,6 +977,19 @@ nav ul{
     }
     .experience-grid .item-4{
         grid-column: 9 / span 5;
+    }
+    /*contact*/
+    #contact .section-content::after{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: calc(50% - 1rem - 1px);
+        content: "";
+        background-color: var(--secondaryColor);
+        opacity: .5;
+        width: 2px;
+        height: 100%;
+        border-radius: 50px;
     }
 }
 @media screen and (min-width: 900px){
