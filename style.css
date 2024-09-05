@@ -137,16 +137,16 @@ footer{
 }
 
 /*Theme*/
-.dark-theme nav ul li a{
+header nav ul li a{
     color: var(--lighterSecondaryColor);
     font-weight: 600;
     transition: all .2s ease-in-out;
 }
-.dark-theme nav ul li a:hover{
+header nav ul li a:hover{
     color:var(--accentColor);
     text-shadow: 0 0 5px var(--accentColor);
 }
-.dark-theme button{
+header button{
     color: var(--tertiaryColor);
 }
 /*Menu*/
@@ -335,14 +335,14 @@ nav ul{
 #skills form{
     margin: 1rem 0;
 }
-#skills form .tag:hover{
-    cursor: pointer;
-}
-#skills form .tag:hover,
-#skills form .tag:has(input:checked){
+
+#skills form .button-tag:hover,
+#skills form .button-tag:has(input:checked){
     border-color: var(--accentColor);
+    background-color: transparent;
     color: var(--accentColor);
     cursor: pointer;
+    font-weight: 300;
 }
 .skills-grid{
     display: grid;
@@ -464,6 +464,9 @@ nav ul{
 }
 .portfolio-item .details :is(p,.tag){
     font-size: clamp(.8rem,3vw,.9rem);
+    font-weight: 200;
+}
+.portfolio-item .details .tag{
     font-weight: 400;
 }
 .portfolio-item .type{
@@ -488,14 +491,20 @@ nav ul{
     flex-wrap: wrap;
     gap: .3rem;
 }
-.tag{
+:is(.tag, .button-tag){
     display: block;
     color: var(--secondaryColor);
     border: thin solid var(--secondaryColor);
     padding: .2rem .875rem;
-    border-radius: 50px;
+    border-radius: 5px;
     font-weight: 400;
     transition: all .2s ease-in-out;
+}
+.button-tag{
+    border: thin solid rgba(0, 116, 189, 0.5);
+    background-color: rgba(0, 116, 189, 0.2);
+    color: var(--tertiaryColor);
+    font-weight: 200;
 }
 .portfolio-item:hover{
     background-color: rgba(0, 116, 189, 0.2);
@@ -523,9 +532,16 @@ nav ul{
     color: var(--accentColor);
     letter-spacing: 1px;
 }
-#skills .view-more i{
-    font-size: 1rem;
+#skills .view-more a i:first-child{
+    font-size: 1.4rem;
     color: var(--accentColor);
+}
+#skills .view-more a i:last-child{
+    font-size: 1rem;
+    opacity: 0;
+}
+#skills .view-more:hover a i:last-child{
+    opacity: 1;
 }
 /*Experience grid*/
 #experience h2{
@@ -626,6 +642,9 @@ nav ul{
     overflow: visible;
 }
 /*Contact*/
+#contact {
+    min-height: 50vh;
+}
 #contact .section-content{
     position: relative;
 }
@@ -642,6 +661,10 @@ nav ul{
 }
 #contact .social-links ul li a{
    text-transform: none;
+   font-size: 1.1rem;
+}
+#contact .section-content .grid-item:nth-child(3){
+    display: none;
 }
 #contact form {
     display: grid;
@@ -1006,6 +1029,23 @@ nav ul{
         grid-column: 9 / span 5;
     }
     /*contact*/
+    #contact .section-content > .grid-item{
+        grid-column: span 2;
+    }
+    #contact .section-content .social-links{
+        margin: auto;
+        width: 50%;
+    }
+    #contact .section-content .social-links ul{
+        gap: 2rem;
+    }
+    #contact .section-content .social-links ul li{
+        flex: 1;
+    }
+    #contact .section-content .social-links ul i{
+        font-size: 3rem;
+    }
+    /*
     #contact .section-content::after{
         position: absolute;
         top: 0;
@@ -1018,9 +1058,7 @@ nav ul{
         height: 100%;
         border-radius: 50px;
     }
-}
-@media screen and (min-width: 900px){
-
+        */
 }
 @media screen and (min-width: 1000px){
     #about .img-wrapper{

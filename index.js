@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded",(e)=>{
     const menuItems = document.querySelectorAll("nav ul li a");
     
     const skillItems = Array.from(document.getElementsByClassName("skill-item"));
-    const skillFilters = document.querySelectorAll("#skills .tag input");
+    const skillFilters = document.querySelectorAll("#skills .button-tag input");
 
     menuItems.forEach((item)=>{
         item.addEventListener("click",()=>{

@@ -30,7 +30,7 @@
     </style>
 </head>
 <body>
-    <header class="dark-theme">
+    <header >
         <div class="logo-wrapper">
             <h1 class="visually-hidden">Vin Souza</h1>
             <img src="./assets/logo.svg" alt="Logo">
@@ -54,7 +54,7 @@
         </div>
     </header>
     <main>
-        <section id="home" class="dark-theme">
+        <section id="home">
             <div class="text-wrapper">
                 <p>Hello, World!</p>
                 <h2>I'm <span>Vin</span></h2>
@@ -88,7 +88,7 @@
                 </div>
             </div>
         </section>
-        <section id="about" class="dark-theme">
+        <section id="about">
             <div class="section-content">
                 <div class="grid-item">
                     <h2>About</h2>
@@ -104,25 +104,25 @@
                 
             </div>
         </section>
-        <section id="skills" class="dark-theme">
+        <section id="skills">
             <div class="section-content">
                 <h2>Skills</h2>
                 <div class="grid-item skillset">
                     <div class="wrapper">
-                        <p>In my short but intense journey on full-stack web development I studied and worked with some of the most popular languages, frameworks, tools and libraries on the market</p>
-                        <p>There is still so much to learn, so this list will keep growing!</p>
+                        <p class="section-description">In my short but intense journey on full-stack web development I studied and worked with some of the most popular languages, frameworks, tools and libraries on the market</p>
+                        <p class="section-description">There is still so much to learn, so this list will keep growing!</p>
                     </div>
                     <div class="wrapper">
                         <form action="#" class="tags">
-                            <label for="webFilter" class="tag">
+                            <label for="webFilter" class="button-tag">
                                 Web
                                 <input type="checkbox" id="webFilter" value="web" hidden>
                             </label>
-                            <label for="mobileFilter" class="tag">
+                            <label for="mobileFilter" class="button-tag">
                                 Mobile
                                 <input type="checkbox" id="mobileFilter" value="mobile" hidden>
                             </label>
-                            <label for="designFilter" class="tag">
+                            <label for="designFilter" class="button-tag">
                                 Design
                                 <input type="checkbox" id="designFilter" value="design" hidden>
                             </label>
@@ -228,7 +228,7 @@
                             <div class="portfolio-item-container">
                                 <a href="https://github.com/vinsouza99/TourOfHeroes" target="_blank" class="portfolio-item card">
                                     <div class="thumbnail-wrapper">
-                                        <img src="./assets/images/react-calculator.png" alt="Item">
+                                        <img src="./assets/images/tourOfHeroes.png" alt="Item">
                                     </div>
                                     <div class="details">
                                         <div class="title"><h3>Tour of Heroes<i class="fa-solid fa-arrow-up-right-from-square"></i></h3><span class="type">Web</span></div>
@@ -237,6 +237,7 @@
                                             <div class="tag" tags="web,html"><span>HTML</span></div>
                                             <div class="tag" tags="web,css"><span>CSS</span></div>
                                             <div class="tag" tags="web,angular"><span>Angular</span></div>
+                                            <div class="tag" tags="web,typescript"><span>TypeScript</span></div>
                                         </div>
                                     </div>
                                 </a>
@@ -273,37 +274,20 @@
                                 </a>
                             </div>
                             <div class="portfolio-item-container">
-                                <a href="https://github.com/vinsouza99/React-Calculator" target="_blank" class="portfolio-item card">
+                                <a href="https://github.com/vinsouza99/jsnake" target="_blank" class="portfolio-item card">
                                     <div class="thumbnail-wrapper">
                                         <img src="./assets/images/JSnake.png" alt="Item">
                                     </div>
                                     <div class="details">
                                         <div class="title"><h3>JSnake <i class="fa-solid fa-arrow-up-right-from-square"></i></h3><span class="type">Web</span></div>
-                                        <p class="description">JSnake is a website where you can play the classic snake game written in JavaScript. I've done this for my final project for the CS50 Professional Certificate for Web Development program.</p>
+                                        <p class="description">JSnake is a website where you can play the classic snake game written in JavaScript. This was my final project for the Harvard's CS50 Web Programming with Python and JavaScript Professional Certificate program.</p>
                                         <div class="tags">
                                             <div class="tag"><span>HTML</span></div>
                                             <div class="tag"><span>CSS</span></div>
                                             <div class="tag"><span>JavaScript</span></div>
                                             <div class="tag"><span>Django</span></div>
                                             <div class="tag"><span>Python</span></div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="portfolio-item-container">
-                                <a href="https://github.com/vinsouza99/React-Calculator" target="_blank" class="portfolio-item card">
-                                    <div class="thumbnail-wrapper">
-                                        <img src="./assets/images/react-calculator.png" alt="Item">
-                                    </div>
-                                    <div class="details">
-                                        <div class="title"><h3>Questoes PRO <i class="fa-solid fa-arrow-up-right-from-square"></i></h3><span class="type">Web</span></div>
-                                        <p class="description">This is a simple calculator application built with React</p>
-                                        <div class="tags">
-                                            <div class="tag"><span>HTML</span></div>
-                                            <div class="tag"><span>CSS</span></div>
-                                            <div class="tag"><span>JavaScript</span></div>
-                                            <div class="tag"><span>Django</span></div>
-                                            <div class="tag"><span>Python</span></div>
+                                            <div class="tag"><span>SQL</span></div>
                                         </div>
                                     </div>
                                 </a>
@@ -311,12 +295,12 @@
                         </div>
                     </div>
                     <div class="view-more">
-                        <a href="https://github.com/vinsouza99">View more <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://github.com/vinsouza99"><i class="fa-brands fa-github" aria-hidden="true"></i> View more <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="experience" class="dark-theme">
+        <section id="experience">
             <div class="section-content">
                 <div class="experience-grid">
                     <div class="wrapper">
@@ -336,7 +320,7 @@
                                     </div>
                                 </div>
                                 <div class="experience-details">
-                                    <h3 class="experience-name">Post Degree in Web Development</h3>
+                                    <h3 class="experience-name">Post Degree in Web & Mobile App Design & Development</h3>
                                     <h4 class="experience-place">Langara College, Canada</h4>
                                     <p class="experience-description">Currently I'm pursuing the 18 months Post-Degree Diploma in Web and Mobile App Design & Development program with the expected graduation being Summer 2025.</p>
                                     <div class="tags">
@@ -393,7 +377,7 @@
                                 <div class="experience-details">
                                     <h3 class="experience-name">Web Development Intern</h3>
                                     <h4 class="experience-place">Millennium IE, Brazil</h4>
-                                    <p class="experience-description">Millennium IE is a local printshop based on the same city I went to university. I was responsible for entire development process, from UI/UX design, to coding, testing, documenting, and deploying. The apps I worked in were different control systems for the company's products that allowed CRUD operations for both employees and clients. My biggest legacy there was a program written in Java that automatized the very tiring and time-consuming task of gathering data from an API and storing in the database.</p>
+                                    <p class="experience-description">Millennium IE is a local printshop based on the same city I went to university. The apps I worked in were different web-based control systems for both the company's employees and clients. My biggest legacy there was a program written in Java that automatized the very tiring and time-consuming task of gathering data from an API and storing in the database.</p>
                                     <div class="tags">
                                         <div class="tag">HTML</div>
                                         <div class="tag">CSS</div>
@@ -437,7 +421,7 @@
                 </div>
             </div>
         </section>
-        <section id="contact" class="dark-theme">
+        <section id="contact">
             <div class="section-content">
                 <h2>Contact</h2>
                 <div class="grid-item">
@@ -454,6 +438,13 @@
                                     </a>
                                 </li>
                                 <li>
+                                    <a href="mailto:vinsouza1039@gmail.com" target="_blank" title="Email">
+                                        <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                                        <span class="visually-hidden">Email</span>
+                                        <span>vinsouza1039@gmail.com</span>
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="https://www.linkedin.com/in/vinicius-abner/" target="_blank" title="Instagram">
                                         <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                                         <span class="visually-hidden">Instagram</span>
@@ -462,11 +453,9 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="mailto:vinsouza1039@gmail.com" target="_blank" title="Email">
-                                        <i class="fa-regular fa-envelope" aria-hidden="true"></i>
-                                        <span class="visually-hidden">Email</span>
-                                        <span>vinsouza1039@gmail.com</span>
-
+                                    <a href="https://wa.me/12366609875" target="_blank" title="Whatsapp">
+                                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                                        <span>Whatsapp</span>
                                     </a>
                                 </li>
                             </ul>
@@ -492,7 +481,7 @@
             </div>
         </section>
     </main>
-    <footer class="dark-theme">
+    <footer>
         Vin Souza &copy; 2024
     </footer>
     
