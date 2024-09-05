@@ -4,10 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.9.2/sass.min.js" integrity="sha512-mA5b7w9mZvGLWgjIqp9KhWNzkkZ/H3gC4Ua6GOn9m/xl1UF4ghH8GsriKvAYxLsxoKvn6NdebW7kZ6iGB3CGSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="./style.css">
     <script src="./index.js"></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Vin Souza</title>
+    <style>
+        @media screen and (min-width: 800px){
+            @keyframes scrollUp {
+                100% {
+                    transform: translateY(-40%);
+                }
+            }
+            /*
+            .portfolio-grid {
+                animation: scrollUp 60s linear;
+
+                &:hover {
+                    animation-play-state: paused;
+                }
+
+            }
+            */
+        }
+    </style>
 </head>
 <body>
     <header class="dark-theme">
@@ -255,15 +275,35 @@
                             <div class="portfolio-item-container">
                                 <a href="https://github.com/vinsouza99/React-Calculator" target="_blank" class="portfolio-item card">
                                     <div class="thumbnail-wrapper">
+                                        <img src="./assets/images/JSnake.png" alt="Item">
+                                    </div>
+                                    <div class="details">
+                                        <div class="title"><h3>JSnake <i class="fa-solid fa-arrow-up-right-from-square"></i></h3><span class="type">Web</span></div>
+                                        <p class="description">JSnake is a website where you can play the classic snake game written in JavaScript. I've done this for my final project for the CS50 Professional Certificate for Web Development program.</p>
+                                        <div class="tags">
+                                            <div class="tag"><span>HTML</span></div>
+                                            <div class="tag"><span>CSS</span></div>
+                                            <div class="tag"><span>JavaScript</span></div>
+                                            <div class="tag"><span>Django</span></div>
+                                            <div class="tag"><span>Python</span></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="portfolio-item-container">
+                                <a href="https://github.com/vinsouza99/React-Calculator" target="_blank" class="portfolio-item card">
+                                    <div class="thumbnail-wrapper">
                                         <img src="./assets/images/react-calculator.png" alt="Item">
                                     </div>
                                     <div class="details">
-                                        <div class="title"><h3>React Calculator <i class="fa-solid fa-arrow-up-right-from-square"></i></h3><span class="type">Web</span></div>
+                                        <div class="title"><h3>Questoes PRO <i class="fa-solid fa-arrow-up-right-from-square"></i></h3><span class="type">Web</span></div>
                                         <p class="description">This is a simple calculator application built with React</p>
                                         <div class="tags">
                                             <div class="tag"><span>HTML</span></div>
                                             <div class="tag"><span>CSS</span></div>
-                                            <div class="tag"><span>React</span></div>
+                                            <div class="tag"><span>JavaScript</span></div>
+                                            <div class="tag"><span>Django</span></div>
+                                            <div class="tag"><span>Python</span></div>
                                         </div>
                                     </div>
                                 </a>
