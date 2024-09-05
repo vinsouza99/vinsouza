@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded",(e)=>{
     
     const skillItems = Array.from(document.getElementsByClassName("skill-item"));
     const skillFilters = document.querySelectorAll("#skills .button-tag input");
+    const experienceDetails = document.querySelectorAll(".experience-details");
 
     menuItems.forEach((item)=>{
         item.addEventListener("click",()=>{
@@ -30,7 +31,6 @@ document.addEventListener("DOMContentLoaded",(e)=>{
     }
     ,500);
 
-    const experienceDescriptions = document.querySelectorAll(".experience-description");
 
     menuToggleBtn.addEventListener("click",(e)=>{
         menu.classList.toggle("hidden");
@@ -39,9 +39,9 @@ document.addEventListener("DOMContentLoaded",(e)=>{
         menuToggleBtnIcon.classList.toggle("fa-xmark")
     });
 
-    experienceDescriptions.forEach((p)=>{
-        p.addEventListener("click", (e)=>{
-            p.classList.toggle("show");
+    experienceDetails.forEach((details)=>{
+        details.addEventListener("click", (e)=>{
+            details.classList.toggle("show");
         });
     })
 

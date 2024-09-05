@@ -80,7 +80,12 @@ header img{
 nav ul li{
     text-align: center;
     padding: .5rem;
+    padding-bottom: calc(.5rem - 5px);
     align-content: center;
+    border-bottom: 5px solid transparent;
+}
+nav ul li:not(:last-of-type):hover{
+    border-color: var(--accentColor);
 }
 nav ul li a,
 .view-more a{
@@ -93,9 +98,6 @@ nav ul li a,
 a:not(#resume-link, .card):hover,
 a:not(#resume-link, .card).active,
 #skipBtn:hover {
-    text-decoration: underline;
-    text-underline-offset: 8px;
-    text-decoration-thickness: 3px;
     color: var(--accentColor);
     text-shadow: 0 0 5px var(--accentColorGlow);
 }
@@ -132,7 +134,8 @@ footer{
 :is(#resume-link, #contact form .form-group button):hover{
     color: var(--tertiaryColor);
     background-color:rgb(0, 163, 153);
-    border-color: var(--accentColor);
+    border-color: rgb(0, 163, 153);
+    box-shadow: 0 0 5px var(--accentColorGlow);
     cursor: pointer;
 }
 
@@ -727,15 +730,21 @@ nav ul{
         content: "";
         height: 35px;
         box-sizing: border-box;
-        border-radius: 100%;
-        border: 10px solid var(--accentColor);
-        background-color: var(--primaryColor);
-        box-shadow: 0px 0px 5px var(--accentColorGlow), inset 0px 0px 5px var(--accentColorGlow);
         top: 1.2vw;
         min-width: 35px;
         left: calc(-1.5rem - 15px);
         z-index: 2;
         flex-grow: 1;
+        border-radius: 100%;
+        border: 10px solid var(--accentColor);
+        background-color: var(--primaryColor);
+        box-shadow: 0px 0px 5px var(--accentColorGlow), inset 0px 0px 5px var(--accentColorGlow);
+    }
+    .item-4 .experience-type::after{
+        content: url("./assets/loading.svg");
+        min-width: 38px;
+        min-height: 38px;
+        border-width: 2px;
     }
     .experience-item .experience-type .line::before {
         content: "";
@@ -870,7 +879,7 @@ nav ul{
     .experience-grid::after{
         left: 0;
         height: 10px;
-        width: calc(100% - 2.8em);
+        width: calc(100% - 2.5em);
         top: calc(50% - 5px);
         grid-column: 1 / 10;
         grid-row: 2/-1;
@@ -887,13 +896,15 @@ nav ul{
         align-items: center;
         gap: .5rem;
         position: relative;
-
     }
     .experience-item{
         grid-row: 2;
     }
     .experience-type .year{
         padding-top: 0;
+    }
+    .experience-item{
+        min-height: 200px;
     }
     .experience-item-wrapper .experience-type .line{
         position: relative;
@@ -932,13 +943,16 @@ nav ul{
         padding-top: .5rem;
         grid-row: 2;
     }
-    .experience-grid .experience-details p:hover{
+    .experience-grid .experience-details{
+        padding-right: 1rem;
+    }
+    .experience-grid .experience-details:hover{
         cursor: pointer;
     }
     .experience-grid .experience-details p{
         display: block;
         position: relative;
-        height: 2rem;
+        height: 0;
         font-size: 1rem;
         max-width: 250px;
         overflow-y: hidden;
@@ -946,11 +960,15 @@ nav ul{
         padding: 0;
         text-align: justify;
         text-justify: distribute;
-        padding-right: 1.8rem;
     }
-    .experience-grid .experience-details p::after{
-        display: inline-block;
+    .experience-grid .experience-details .experience-name{
+        position: relative;
+        display: flex;
+    }
+    .experience-grid .experience-details .experience-name::after{
+        display: block;
         text-rendering: auto;
+        color: var(--tertiaryColor);
         -webkit-font-smoothing: antialiased;
         font: var(--fa-font-solid);
         content: "\f107";
@@ -959,35 +977,33 @@ nav ul{
         text-align: right;
         text-transform: uppercase;
         opacity: 100%;
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        top: 0;
-        background: linear-gradient(rgba(0, 30, 54, 0), rgba(0, 30, 54, 1));
+        padding-left: .5rem;
         transition: all .2s ease-in-out;
     }
-    .experience-grid .experience-details p.show {
+    .experience-grid .tags{
+        display: none;
+    }
+    .experience-grid .experience-details.show p {
         height: 100%;
         padding: initial;
         padding-bottom: 1rem;
     }
-    .experience-grid :is(.item-2, .item-4) .experience-details:has(p.show){
+    .experience-grid .experience-details.show .tags{
+        display: flex;
+    }
+    .experience-grid :is(.item-2, .item-4) .experience-details.show{
         padding-bottom: 3.5rem;
     }
-    .experience-grid .experience-details p.show::after{
+    .experience-grid .experience-details.show .experience-name::after{
         opacity: 100%;
         background: transparent;
-        align-content: end;
         content: "\f106";
-        bottom: 0px;
     }
 
     .experience-grid :is(.item-1,.item-3) .experience-item-wrapper{
         justify-content: start;
     }
     .experience-grid :is(.item-1,.item-3) .experience-type::after{
-        bottom: unset;
         top: calc(-35px - .5rem);
     }
     .experience-grid :is(.item-1,.item-3) .experience-type{
@@ -1081,11 +1097,13 @@ nav ul{
         grid-column: 8 / span 4;
     } 
     .experience-grid > .wrapper{
+        text-align: justify;
         padding-right: .5rem;
         grid-column: 1/ span 3;
         grid-row: 1;
         align-self: center;
         position: static;
+        min-height: 300px;
     }
     .experience-grid > .wrapper h2{
         margin-top: 0;
