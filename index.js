@@ -2,7 +2,9 @@ document.addEventListener("DOMContentLoaded",(e)=>{
     /*
     Document's elements queries
     */
-    const header =document.getElementsByTagName("header")[0];
+    const header = document.getElementsByTagName("header")[0];
+    const otherInfo = document.querySelector("#home .other-info");
+    const socialLinks = document.querySelector("#home .social-links");
     const skipBtn = document.getElementById("skipBtn");
     const menuToggleBtn = document.getElementById("toggle-menu-btn");
     const menuToggleBtnText = document.querySelector("#toggle-menu-btn span");
@@ -26,10 +28,13 @@ document.addEventListener("DOMContentLoaded",(e)=>{
     setTimeout(()=>{
         header.style.opacity = "1";
         document.getElementsByTagName("html")[0].style.overflowY = "scroll";
-        skipBtn.style.opacity = "0";
-        skipBtn.disabled = true;
+        //skipBtn.style.opacity = "0";
+        //skipBtn.disabled = true;
+        otherInfo.style.opacity = "1";
+        socialLinks.style.opacity = "1";
+
     }
-    ,500);
+    ,9000);
 
 
     menuToggleBtn.addEventListener("click",(e)=>{
