@@ -45,7 +45,8 @@ html, body{
     overflow-x: hidden;
 }
 html{
-    overflow: hidden;
+    /*overflow: hidden;*/
+    overflow: auto;
 }
 h1,h2,h3{
     font-family: 'Inconsolata';
@@ -103,6 +104,7 @@ a:not(#resume-link, .card).active,
 }
 section{
     padding: 1rem 2rem;
+    min-height: 100vh;
 }
 section:not(#home){
     max-width: 1200px;
@@ -374,9 +376,6 @@ nav ul{
 #skills .grid-item:first-child {
     display: grid;
 }
-#skills .portfolio{
-    grid-column: 1;
-}
 #skills form{
     margin: 1rem 0;
 }
@@ -393,6 +392,7 @@ nav ul{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     background-color: rgba(0, 116, 189, 0.08);
+    row-gap: .5rem;
     padding: .5rem;
     border-radius: 10px;
     overflow: hidden;
@@ -411,12 +411,20 @@ nav ul{
     mix-blend-mode: luminosity;
     transition: all .5s ease-in-out;
 }
+.skills-grid .skill-item span{
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
 .skills-grid .skill-item.active,
 .skills-grid .skill-item:hover{
     mix-blend-mode: normal;
     cursor: pointer;
 }
-.portfolio-grid{
+.skills-grid .skill-item.active span,
+.skills-grid .skill-item:hover span{
+    opacity: 1;
+}
+#portfolio .portfolio-grid{
     display: grid;
     grid-auto-flow: column;
     gap: 1rem;
@@ -424,33 +432,26 @@ nav ul{
     padding: 1rem 50px;
     position: relative;
 }
-#skills .portfolio .grid-wrapper::before{
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    right: unset;
-    top: 0;
-    bottom: 0;
-    width:50px;
-    z-index: 1;
-    background: linear-gradient(90deg,rgba(0,30,54,1), rgba(0,30,54,0));
-
+.portfolio, .top-3-wrapper{
+    display: grid;
+    gap: 1rem;
 }
-#skills .portfolio .grid-wrapper::after{
-    content: "";
-    display: block;
-    position: absolute;
-    left: unset;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 100px;
-    z-index: 1;
-    background: linear-gradient(90deg, rgba(0,30,54,0), rgba(0,30,54,1));
+.top-3-wrapper{
+    padding-bottom: 2rem;
 }
-
-.grid-wrapper::-webkit-scrollbar {
+.top-3-wrapper .portfolio-item{
+    padding: .4rem .875rem;
+}
+.top-3-wrapper .portfolio-item-container:nth-child(2) .portfolio-item{
+    flex-direction: row-reverse;
+}
+.portfolio .sub-section-title{
+    margin: 2rem 0;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+#portfolio .grid-wrapper::-webkit-scrollbar {
     display: none;
   }
 .portfolio-grid::-webkit-scrollbar{
@@ -479,16 +480,29 @@ nav ul{
     min-width: 250px;
     display: flex;
 }
+@container portfolio-item (max-width:400px){
+    .portfolio-item{
+        flex-direction: column;
+    }
+}
 .portfolio-item{
     box-sizing: border-box;
     display: flex;
+}
+.portfolio-item:hover .details :is(h3 a, i){
+    color: var(--accentColor);
+    opacity: 1;
+}
+.portfolio-item h3 a{
     text-decoration: none;
-    color: var(--tertiaryColor);
+    color: var(--lighterSecondaryColor);
 }
 .portfolio-item > div{
     flex: 1;
 }
 .portfolio-item .details{
+    display: flex;
+    flex-flow: column nowrap;
     flex-grow: 2;
     padding: 1rem 1rem;
 }
@@ -506,6 +520,10 @@ nav ul{
 .portfolio-item .details h3 i{
     font-size: .875rem;
     opacity: 0;
+}
+.portfolio-item .details p{
+    display: flex;
+    flex-grow: 1;
 }
 .portfolio-item .details :is(p,.tag){
     font-size: clamp(.8rem,3vw,.9rem);
@@ -562,30 +580,29 @@ nav ul{
 .portfolio-item:hover i{
     opacity: 1;
 }
-@container portfolio-item (max-width: 400px){
-    .portfolio-item{
-        flex-direction: column;
-    }
-}
-#skills .view-more{
+
+#portfolio .view-more{
     display: flex;
     justify-content: center;
     padding-top: 1.5rem;
 }
-#skills .view-more a{
+#portfolio .view-more a{
+    display: block;
+    width: 100%;
+    text-align: center;
     font-size: 1.2rem;
     color: var(--accentColor);
     letter-spacing: 1px;
 }
-#skills .view-more a i:first-child{
+#portfolio .view-more a i:first-child{
     font-size: 1.4rem;
     color: var(--accentColor);
 }
-#skills .view-more a i:last-child{
+#portfolio .view-more a i:last-child{
     font-size: 1rem;
     opacity: 0;
 }
-#skills .view-more:hover a i:last-child{
+#portfolio .view-more:hover a i:last-child{
     opacity: 1;
 }
 /*Experience grid*/
@@ -754,6 +771,11 @@ nav ul{
 }
 @media screen and (min-width: 600px){
 
+    #portfolio .portfolio-grid{
+        grid-auto-flow: row;
+        overflow: visible;
+    }
+
     .experience-grid .row{
         left: 0;
     }
@@ -861,7 +883,7 @@ nav ul{
         grid-template-rows: 50px auto;
         grid-template-columns: repeat(2, 1fr);
     }
-    #skills .grid-item .grid-wrapper::before{
+    #portfolio .grid-item .grid-wrapper::before{
         left: 0;
         right: 0;
         top: -1px;
@@ -871,7 +893,7 @@ nav ul{
         background: linear-gradient(rgba(0,30,54,1), rgba(0,30,54,0));
     
     }
-    #skills .grid-item .grid-wrapper::after{
+    #portfolio .grid-item .grid-wrapper::after{
         left: 0;
         right: 0;
         top: unset;
@@ -881,16 +903,14 @@ nav ul{
         background: linear-gradient(rgba(0,30,54,0), rgba(0,30,54,1));
     }
     .portfolio-item-container{
-        display: block;
+        display: flex;
     }
-    .portfolio-grid{
+    #portfolio .portfolio-grid{
         grid-auto-flow: unset;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
         grid-template-rows: unset;
         gap: 1rem;
-        overflow-y: scroll;
-        overflow-x: unset;
-        max-height: 80vh;
+        overflow: hidden;
         padding: 0 0.1rem;
         position: relative;
     }
@@ -902,10 +922,9 @@ nav ul{
     #skills .grid-wrapper{
         padding:0;
     }
-    #skills .portfolio-grid{
-        padding: 0 1rem 0 0.1rem;
-        padding-top: calc(55px + 1rem);
-        padding-bottom: 55px;
+    .portfolio{
+        grid-row: 2;
+        grid-column: 1/-1;
     }
     
     /*Experience grid*/

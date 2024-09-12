@@ -9,25 +9,6 @@
     <script src="./index.js"></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Vin Souza</title>
-    <style>
-        @media screen and (min-width: 800px){
-            @keyframes scrollUp {
-                100% {
-                    transform: translateY(-40%);
-                }
-            }
-            /*
-            .portfolio-grid {
-                animation: scrollUp 60s linear;
-
-                &:hover {
-                    animation-play-state: paused;
-                }
-
-            }
-            */
-        }
-    </style>
 </head>
 <body>
     <header >
@@ -46,6 +27,7 @@
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="https://drive.google.com/file/d/1M8NSZkn3N6qTjQwBgQh40cfjdVG9zOF2/view?usp=sharing" target="_blank" title="View my resume" id="resume-link">Resume</a></li>
@@ -107,81 +89,107 @@
         <section id="skills">
             <div class="section-content">
                 <h2>Skills</h2>
+                <div class="grid-item wrapper">
+                    <p class="section-description">In my short but intense journey on full-stack web development I studied and worked with some of the most popular languages, frameworks, tools and libraries on the market</p>
+                    <p class="section-description">There is still so much to learn, so this list will keep growing!</p>
+                </div>
                 <div class="grid-item skillset">
-                    <div class="wrapper">
-                        <p class="section-description">In my short but intense journey on full-stack web development I studied and worked with some of the most popular languages, frameworks, tools and libraries on the market</p>
-                        <p class="section-description">There is still so much to learn, so this list will keep growing!</p>
-                    </div>
                     <div class="wrapper">
                         <form action="#" class="tags">
                             <label for="webFilter" class="button-tag">
                                 Web
-                                <input type="checkbox" id="webFilter" value="web" hidden>
+                                <input type="radio" id="webFilter" value="web" hidden name="filter">
                             </label>
-                            <label for="mobileFilter" class="button-tag">
-                                Mobile
-                                <input type="checkbox" id="mobileFilter" value="mobile" hidden>
+                            <label for="languageFilter" class="button-tag">
+                                Languages
+                                <input type="radio" id="languageFilter" value="language" hidden name="filter">
+                            </label>
+                            <label for="frameworkFilter" class="button-tag">
+                                Frameworks
+                                <input type="radio" id="frameworkFilter" value="framework" hidden name="filter">
                             </label>
                             <label for="designFilter" class="button-tag">
                                 Design
-                                <input type="checkbox" id="designFilter" value="design" hidden>
+                                <input type="radio" id="designFilter" value="design" hidden name="filter">
+                            </label>
+                            <label for="infraFilter" class="button-tag">
+                                Infrastructure
+                                <input type="radio" id="infraFilter" value="infrastructure" hidden name="filter">
                             </label>
                         </form>
                         <div class="grid-wrapper">
                             <div class="skills-grid">
-                                <button class="skill-item" tags="web">
+                                <button class="skill-item" tags="web,language">
                                     <div class="img-wrapper">
                                         <img src="./assets/images/html.svg" alt="HTML">
                                     </div>
                                     <span>HTML</span>
                                 </button>
-                                <button class="skill-item" tags="web">
+                                <button class="skill-item" tags="web,language">
                                     <div class="img-wrapper">
                                         <img src="./assets/images/css.svg" alt="CSS">
                                     </div>
                                     <span>CSS</span>
                                 </button>
-                                <button class="skill-item" tags="web">
+                                <button class="skill-item" tags="web,language">
                                     <div class="img-wrapper">
                                         <img src="./assets/images/js.svg" alt="JavaScript">
                                     </div>
                                     <span>JavaScript</span>
                                 </button>
-                                <button class="skill-item" tags="web">
+                                <button class="skill-item" tags="web,language">
                                     <div class="img-wrapper">
                                         <img src="./assets/images/java.svg" alt="Java">
                                     </div>
                                     <span>Java</span>
                                 </button>
-                                <button class="skill-item" tags="web">
+                                <button class="skill-item" tags="web,language">
                                     <div class="img-wrapper">
                                         <img src="./assets/images/python.svg" alt="Python">
                                     </div>
                                     <span>Python</span>
                                 </button>
-                                <button class="skill-item" tags="web">
+                                <button class="skill-item" tags="web,language">
                                     <div class="img-wrapper">
                                         <img src="./assets/images/csharp.svg" alt="C Sharp">
                                     </div>
                                     <span>C#</span>
                                 </button>
-                                <button class="skill-item" tags="web">
+                                <button class="skill-item" tags="web,framework">
                                     <div class="img-wrapper">
                                         <img src="./assets/images/angular.svg" alt="Angular">
                                     </div>
                                     <span>Angular</span>
                                 </button>
-                                <button class="skill-item" tags="web">
+                                <button class="skill-item" tags="web,framework">
                                     <div class="img-wrapper">
                                         <img src="./assets/images/react.svg" alt="React">
                                     </div>
                                     <span>React</span>
                                 </button>
-                                <button class="skill-item" tags="web">
+                                <button class="skill-item" tags="web,infrastructure">
                                     <div class="img-wrapper">
                                         <img src="./assets/images/node.svg" alt="Node JS">
                                     </div>
-                                    <span>NodeJs</span>
+                                    <span>Node JS</span>
+                                </button>
+                                <button class="skill-item" tags="web,infrastructure">
+                                    <div class="img-wrapper">
+                                        <img src="./assets/images/dotnet.svg" alt="Dot Net">
+                                    </div>
+                                    <span>.NET</span>
+                                </button>
+                                <button class="skill-item" tags="infrastructure">
+                                    <div class="img-wrapper">
+                                        <img src="./assets/images/sql.svg" alt="SQL">
+                                    </div>
+                                    <span>SQL</span>
+                                </button>
+                                <button class="skill-item" tags="infrastructure">
+                                    <div class="img-wrapper">
+                                        <img src="./assets/images/nosql.svg" alt="No SQL">
+                                    </div>
+                                    <span>NoSQL</span>
                                 </button>
                                 <button class="skill-item" tags="web">
                                     <div class="img-wrapper">
@@ -205,16 +213,80 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section id="portfolio">
+            <div class="section-content">
+                <div class="grid-item">
+                    <h2>Portfolio</h2>
+                    <p class="section-description">
+                        I’ve built so many things I’m proud of, and  here are some of them!
+                    </p>
+                </div>
                 <div class="grid-item portfolio">
+                    <div class="top-3-wrapper">
+                        <div class="portfolio-item-container">
+                            <div class="portfolio-item card">
+                                <div class="thumbnail-wrapper">
+                                    <img src="./assets/images/favr.png" alt="Item">
+                                </div>
+                                <div class="details">
+                                    <div class="title"><h3><a href="https://favr.onrender.com/" target="_blank" >Favr <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3><span class="type">Web</span></div>
+                                    <p class="description">Favr is a PWA that improves the life quality of senior citizens by connecting them with volunteer students</p>
+                                    <div class="tags">
+                                        <div class="tag" tags="web,html"><span>HTML</span></div>
+                                        <div class="tag" tags="web,css"><span>CSS</span></div>
+                                        <div class="tag" tags="web,javascript"><span>JavaScript</span></div>
+                                        <div class="tag" tags="web,firebase"><span>Firebase</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-item-container">
+                            <div class="portfolio-item card">
+                                <div class="thumbnail-wrapper">
+                                    <img src="./assets/images/favr.png" alt="Item">
+                                </div>
+                                <div class="details">
+                                    <div class="title"><h3><a href="https://yoshan0921.github.io/" target="_blank" >Favr <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3><span class="type">Web</span></div>
+                                    <p class="description">Favr is a PWA that improves the life quality of senior citizens by connecting them with volunteer students</p>
+                                    <div class="tags">
+                                        <div class="tag" tags="web,html"><span>HTML</span></div>
+                                        <div class="tag" tags="web,css"><span>CSS</span></div>
+                                        <div class="tag" tags="web,javascript"><span>JavaScript</span></div>
+                                        <div class="tag" tags="web,firebase"><span>Firebase</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-item-container">
+                            <div class="portfolio-item card">
+                                <div class="thumbnail-wrapper">
+                                    <img src="./assets/images/favr.png" alt="Item">
+                                </div>
+                                <div class="details">
+                                    <div class="title"><h3><a href="https://yoshan0921.github.io/" target="_blank" >Favr <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3><span class="type">Web</span></div>
+                                    <p class="description">Favr is a PWA that improves the life quality of senior citizens by connecting them with volunteer students</p>
+                                    <div class="tags">
+                                        <div class="tag" tags="web,html"><span>HTML</span></div>
+                                        <div class="tag" tags="web,css"><span>CSS</span></div>
+                                        <div class="tag" tags="web,javascript"><span>JavaScript</span></div>
+                                        <div class="tag" tags="web,firebase"><span>Firebase</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="grid-wrapper">
+                        <h3 class="sub-section-title">Other projects</h3>
                         <div class="portfolio-grid">
                             <div class="portfolio-item-container">
-                                <a href="https://yoshan0921.github.io/" target="_blank" class="portfolio-item card">
+                                <div class="portfolio-item card">
                                     <div class="thumbnail-wrapper">
                                         <img src="./assets/images/favr.png" alt="Item">
                                     </div>
                                     <div class="details">
-                                        <div class="title"><h3>Favr <i class="fa-solid fa-arrow-up-right-from-square"></i></h3><span class="type">Web</span></div>
+                                        <div class="title"><h3><a href="https://yoshan0921.github.io/" target="_blank" >Favr <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3><span class="type">Web</span></div>
                                         <p class="description">Favr is a PWA that improves the life quality of senior citizens by connecting them with volunteer students</p>
                                         <div class="tags">
                                             <div class="tag" tags="web,html"><span>HTML</span></div>
@@ -223,80 +295,82 @@
                                             <div class="tag" tags="web,firebase"><span>Firebase</span></div>
                                         </div>
                                     </div>
-                                </a>
+                                </div>
                             </div>
                             <div class="portfolio-item-container">
-                                <a href="https://github.com/vinsouza99/TourOfHeroes" target="_blank" class="portfolio-item card">
+                                <div class="portfolio-item card">
                                     <div class="thumbnail-wrapper">
-                                        <img src="./assets/images/tourOfHeroes.png" alt="Item">
+                                        <img src="./assets/images/favr.png" alt="Item">
                                     </div>
                                     <div class="details">
-                                        <div class="title"><h3>Tour of Heroes<i class="fa-solid fa-arrow-up-right-from-square"></i></h3><span class="type">Web</span></div>
-                                        <p class="description">This is my first SPA with Angular. It is a wikipedia-like website about Marvel's characters and it was built based on the tutorial available on Angular's website.</p>
+                                        <div class="title"><h3><a href="https://yoshan0921.github.io/" target="_blank" >Favr <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3><span class="type">Web</span></div>
+                                        <p class="description">Favr is a PWA that improves the life quality of senior citizens by connecting them with volunteer students</p>
                                         <div class="tags">
                                             <div class="tag" tags="web,html"><span>HTML</span></div>
                                             <div class="tag" tags="web,css"><span>CSS</span></div>
-                                            <div class="tag" tags="web,angular"><span>Angular</span></div>
-                                            <div class="tag" tags="web,typescript"><span>TypeScript</span></div>
+                                            <div class="tag" tags="web,javascript"><span>JavaScript</span></div>
+                                            <div class="tag" tags="web,firebase"><span>Firebase</span></div>
                                         </div>
                                     </div>
-                                </a>
+                                </div>
                             </div>
                             <div class="portfolio-item-container">
-                                <a href="https://github.com/vinsouza99/React-Calculator" target="_blank" class="portfolio-item card">
+                                <div class="portfolio-item card">
                                     <div class="thumbnail-wrapper">
-                                        <img src="./assets/images/react-calculator.png" alt="Item">
+                                        <img src="./assets/images/favr.png" alt="Item">
                                     </div>
                                     <div class="details">
-                                        <div class="title"><h3>React Calculator <i class="fa-solid fa-arrow-up-right-from-square"></i></h3><span class="type">Web</span></div>
-                                        <p class="description">This is a simple calculator application built with React</p>
+                                        <div class="title"><h3><a href="https://yoshan0921.github.io/" target="_blank" >Favr <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3><span class="type">Web</span></div>
+                                        <p class="description">Favr is a PWA that improves the life quality of senior citizens by connecting them with volunteer students</p>
                                         <div class="tags">
                                             <div class="tag" tags="web,html"><span>HTML</span></div>
                                             <div class="tag" tags="web,css"><span>CSS</span></div>
-                                            <div class="tag" tags="web,react"><span>React</span></div>
+                                            <div class="tag" tags="web,javascript"><span>JavaScript</span></div>
+                                            <div class="tag" tags="web,firebase"><span>Firebase</span></div>
                                         </div>
                                     </div>
-                                </a>
+                                </div>
                             </div>
                             <div class="portfolio-item-container">
-                                <a href="https://vpereiradesouz00.wmdd-wordpress.com/finalproject/" target="_blank" class="portfolio-item card">
+                                <div class="portfolio-item card">
                                     <div class="thumbnail-wrapper">
-                                        <img src="./assets/images/space_odyssey.png" alt="Item">
+                                        <img src="./assets/images/favr.png" alt="Item">
                                     </div>
                                     <div class="details">
-                                        <div class="title"><h3>Space Odyssey <i class="fa-solid fa-arrow-up-right-from-square"></i></h3><span class="type">Web</span></div>
-                                        <p class="description">Space Odyssey is a Wordpress theme I created alongside my talented designer friend Hanbee for our final WordPress project at Langara</p>
+                                        <div class="title"><h3><a href="https://yoshan0921.github.io/" target="_blank" >Favr <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3><span class="type">Web</span></div>
+                                        <p class="description">Favr is a PWA that improves the life quality of senior citizens by connecting them with volunteer students</p>
                                         <div class="tags">
-                                            <div class="tag"><span>WordPress</span></div>
-                                            <div class="tag"><span>CSS</span></div>
+                                            <div class="tag" tags="web,html"><span>HTML</span></div>
+                                            <div class="tag" tags="web,css"><span>CSS</span></div>
+                                            <div class="tag" tags="web,javascript"><span>JavaScript</span></div>
+                                            <div class="tag" tags="web,firebase"><span>Firebase</span></div>
                                         </div>
                                     </div>
-                                </a>
+                                </div>
                             </div>
                             <div class="portfolio-item-container">
-                                <a href="https://github.com/vinsouza99/jsnake" target="_blank" class="portfolio-item card">
+                                <div class="portfolio-item card">
                                     <div class="thumbnail-wrapper">
-                                        <img src="./assets/images/JSnake.png" alt="Item">
+                                        <img src="./assets/images/favr.png" alt="Item">
                                     </div>
                                     <div class="details">
-                                        <div class="title"><h3>JSnake <i class="fa-solid fa-arrow-up-right-from-square"></i></h3><span class="type">Web</span></div>
-                                        <p class="description">JSnake is a website where you can play the classic snake game written in JavaScript. This was my final project for the Harvard's CS50 Web Programming with Python and JavaScript Professional Certificate program.</p>
+                                        <div class="title"><h3><a href="https://yoshan0921.github.io/" target="_blank" >Favr <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3><span class="type">Web</span></div>
+                                        <p class="description">Favr is a PWA that improves the life quality of senior citizens by connecting them with volunteer students</p>
                                         <div class="tags">
-                                            <div class="tag"><span>HTML</span></div>
-                                            <div class="tag"><span>CSS</span></div>
-                                            <div class="tag"><span>JavaScript</span></div>
-                                            <div class="tag"><span>Django</span></div>
-                                            <div class="tag"><span>Python</span></div>
-                                            <div class="tag"><span>SQL</span></div>
+                                            <div class="tag" tags="web,html"><span>HTML</span></div>
+                                            <div class="tag" tags="web,css"><span>CSS</span></div>
+                                            <div class="tag" tags="web,javascript"><span>JavaScript</span></div>
+                                            <div class="tag" tags="web,firebase"><span>Firebase</span></div>
                                         </div>
                                     </div>
-                                </a>
+                                </div>
+                            </div>
+                            <div class="view-more">
+                                <a href="https://github.com/vinsouza99"><i class="fa-brands fa-github" aria-hidden="true"></i> View more <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="view-more">
-                        <a href="https://github.com/vinsouza99"><i class="fa-brands fa-github" aria-hidden="true"></i> View more <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
-                    </div>
+                    
                 </div>
             </div>
         </section>

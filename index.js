@@ -27,14 +27,14 @@ document.addEventListener("DOMContentLoaded",(e)=>{
     })
     setTimeout(()=>{
         header.style.opacity = "1";
-        document.getElementsByTagName("html")[0].style.overflowY = "scroll";
+        //document.getElementsByTagName("html")[0].style.overflowY = "scroll";
         //skipBtn.style.opacity = "0";
         //skipBtn.disabled = true;
         otherInfo.style.opacity = "1";
         socialLinks.style.opacity = "1";
 
     }
-    ,9000);
+    ,500);
 
 
     menuToggleBtn.addEventListener("click",(e)=>{
@@ -54,8 +54,9 @@ document.addEventListener("DOMContentLoaded",(e)=>{
         filter.addEventListener("change",()=>{
             let chosenFilter = filter.value;
             skillItems.forEach(item =>{
+                item.classList.remove("active");
                 if(item.getAttribute("tags").split(",").includes(chosenFilter)){
-                    item.classList.toggle("active");
+                    item.classList.add("active");
                 }
             })     
         });
