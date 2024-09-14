@@ -466,12 +466,6 @@ nav ul{
 .top-3-wrapper{
     padding-bottom: 2rem;
 }
-.top-3-wrapper .portfolio-item{
-    padding: .4rem .875rem;
-}
-.top-3-wrapper .portfolio-item-container:nth-child(2) .portfolio-item{
-    flex-direction: row-reverse;
-}
 .portfolio .sub-section-title{
     margin: 2rem 0;
     text-align: center;
@@ -510,9 +504,14 @@ nav ul{
     min-width: 250px;
     display: flex;
 }
+
 @container portfolio-item (max-width:400px){
     .portfolio-item{
         flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .portfolio-item.top3{
+        padding: 0;
     }
     .portfolio-item .thumbnail-wrapper{
         min-height: 200px;
@@ -955,6 +954,14 @@ nav ul{
         padding: 0 0.1rem;
         position: relative;
     }
+    
+    #portfolio .top-3-wrapper .portfolio-item-container:nth-child(2) .portfolio-item{
+        flex-direction: row-reverse;
+    }
+    #portfolio .portfolio-item.top3{
+        padding: .4rem .875rem;
+    }
+
     #skills .grid-item:nth-of-type(2){
         grid-column: 2;
         grid-row: 1/3;
