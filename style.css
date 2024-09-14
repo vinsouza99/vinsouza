@@ -46,7 +46,7 @@ html, body{
 }
 html{
     /*overflow: hidden;*/
-    overflow: auto;
+    overflow: hidden;
 }
 h1,h2,h3{
     font-family: 'Inconsolata';
@@ -80,12 +80,10 @@ header img{
 
 nav ul li{
     text-align: center;
-    padding: .5rem;
-    padding-bottom: calc(.5rem - 5px);
     align-content: center;
-    border-bottom: 5px solid transparent;
 }
-nav ul li:not(:last-of-type):hover{
+nav ul li:not(:last-of-type):hover,
+nav ul li:not(:last-of-type) :has(a:active){
     border-color: var(--accentColor);
 }
 nav ul li a,
@@ -143,13 +141,18 @@ footer{
 
 /*Theme*/
 header nav ul li a{
+    display: block;
+    box-sizing: border-box;
     color: var(--lighterSecondaryColor);
     font-weight: 600;
     transition: all .2s ease-in-out;
+    border-bottom: 5px solid transparent;
+    padding: .5rem;
 }
-header nav ul li a:hover{
+header nav ul li :is(a:hover, a.active){
     color:var(--accentColor);
     text-shadow: 0 0 5px var(--accentColor);
+    border-bottom-color: var(--accentColor);
 }
 header button{
     color: var(--tertiaryColor);
@@ -228,7 +231,7 @@ nav ul{
 }
 .card{
     background-color: rgba(0, 116, 189, 0.1);
-    border: thin solid rgba(0, 116, 189, 0.5);
+    border: thin solid rgba(0, 116, 189, 0.2);
     border-radius: 10px;
     transition: all .2s ease-in-out;
 }
@@ -300,7 +303,15 @@ nav ul{
 }
 #home :is(.social-links, .other-info){
     opacity: 0;
+}
+#home :is(.social-links, .other-info) *{
     transition: all .4s ease-in-out;
+}
+#home .social-links{
+    margin: 2rem 0;
+}
+#home .social-links ul{
+    gap: 2rem;
 }
 .social-links nav ul li a{
     display: flex;
@@ -309,11 +320,12 @@ nav ul{
     font-size: 1rem;
     align-items: center;
 }
-.social-links i{
-    font-size: 2rem;
+#home .social-links i{
+    color: var(--secondaryColor);
+    font-size: 2.5rem;
 }
-#home .social-links nav ul li a:hover{
-    text-shadow: 0 0 5px var(--accentColor);
+#home .social-links nav ul li a:hover i{
+    text-shadow: 0 0 2px var(--accentColor);
     color: var(--accentColor);
     text-decoration: none !important;
 }
@@ -334,16 +346,27 @@ nav ul{
 #home .other-info span{
     font-weight: 600;
 }
+#home .skip-btn-wrapper{
+    position: absolute;
+    bottom: 8rem;
+    right: 4rem;
+    text-align: right;
+}
 #home #skipBtn{
     background-color: transparent;
     border: none;
-    color: var(--accentColor);
+    border-bottom: 5px solid transparent;
+    color: var(--secondaryColor);
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: all .4s ease-in-out;
-    /*opacity: 1;*/
-    opacity: 0;
+    opacity: 1;
+}
+#home #skipBtn:hover{
+    cursor: pointer;
+    color: var(--lighterSecondaryColor);
+    border-color: (--lighterSecondaryColor);
 }
 /*About*/
 #about .section-content{
@@ -415,6 +438,9 @@ nav ul{
     opacity: 0;
     transition: all .5s ease-in-out;
 }
+.skills-grid .skill-item img{
+    max-width: 55px;
+}
 .skills-grid .skill-item.active,
 .skills-grid .skill-item:hover{
     mix-blend-mode: normal;
@@ -424,6 +450,7 @@ nav ul{
 .skills-grid .skill-item:hover span{
     opacity: 1;
 }
+/*PORTFOLIO*/
 #portfolio .portfolio-grid{
     display: grid;
     grid-auto-flow: column;
@@ -434,7 +461,7 @@ nav ul{
 }
 .portfolio, .top-3-wrapper{
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
 }
 .top-3-wrapper{
     padding-bottom: 2rem;
@@ -453,6 +480,9 @@ nav ul{
 }
 #portfolio .grid-wrapper::-webkit-scrollbar {
     display: none;
+  }
+  #portfolio .section-content{
+    row-gap: 2rem;
   }
 .portfolio-grid::-webkit-scrollbar{
     display: inline;
@@ -484,6 +514,14 @@ nav ul{
     .portfolio-item{
         flex-direction: column;
     }
+    .portfolio-item .thumbnail-wrapper{
+        min-height: 200px;
+    }
+}
+@container portfolio-item (min-width:500px){
+    .portfolio-item .thumbnail-wrapper{
+        aspect-ratio: 4/3;
+    }
 }
 .portfolio-item{
     box-sizing: border-box;
@@ -513,8 +551,6 @@ nav ul{
 .portfolio-item .details h3{
     display: block;
     margin: 0;
-}
-.portfolio-item .details h3{
     color: var(--lighterSecondaryColor);
 }
 .portfolio-item .details h3 i{
@@ -524,6 +560,7 @@ nav ul{
 .portfolio-item .details p{
     display: flex;
     flex-grow: 1;
+    line-height: 1.15;
 }
 .portfolio-item .details :is(p,.tag){
     font-size: clamp(.8rem,3vw,.9rem);
@@ -540,7 +577,6 @@ nav ul{
 }
 .portfolio-item .thumbnail-wrapper{
     overflow: hidden;
-    aspect-ratio: 2/1;
     padding: .5rem;
 }
 .portfolio-item .thumbnail-wrapper img{
@@ -548,6 +584,7 @@ nav ul{
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
+    mix-blend-mode: overlay;
 }
 .tags{
     display: flex;
@@ -576,6 +613,9 @@ nav ul{
     cursor: pointer !important;
     color: var(--accentColor) !important;
     border-color: var(--accentColor) !important;
+}
+.portfolio-item:hover img{
+    mix-blend-mode: normal;
 }
 .portfolio-item:hover i{
     opacity: 1;
@@ -743,6 +783,7 @@ nav ul{
 }
 #contact .social-links a:hover{
     text-decoration: none !important;
+    border: none !important;
 }
 #contact form .form-group :is(input, textarea){
     background-color: var(--tertiaryColor);
@@ -1013,14 +1054,13 @@ nav ul{
     .experience-grid .experience-details p{
         display: block;
         position: relative;
-        height: 0;
+        height: 1px;
         font-size: 1rem;
         max-width: 250px;
-        overflow-y: hidden;
+        overflow-y: scroll;
         transition: all .4s ease-in-out;
         padding: 0;
-        text-align: justify;
-        text-justify: distribute;
+        opacity: 0;
     }
     .experience-grid .experience-details .experience-name{
         position: relative;
@@ -1042,15 +1082,26 @@ nav ul{
         transition: all .2s ease-in-out;
     }
     .experience-grid .tags{
-        display: none;
+        opacity: 0;
+        transition: all .2s ease-in-out;
     }
     .experience-grid .experience-details.show p {
+        opacity: 1;
         height: 100%;
+        max-height: 180px;
         padding: initial;
         padding-bottom: 1rem;
     }
+    .experience-grid .experience-details p::-webkit-scrollbar {
+        background: rgb(0, 42, 76);
+        width: 3px;
+        border-radius: 10px;
+    }
+    .experience-grid .experience-details p::-webkit-scrollbar-thumb{
+        background: var(--accentColor);
+    }
     .experience-grid .experience-details.show .tags{
-        display: flex;
+        opacity: 1;
     }
     .experience-grid :is(.item-2, .item-4) .experience-details.show{
         padding-bottom: 3.5rem;
@@ -1122,20 +1173,6 @@ nav ul{
     #contact .section-content .social-links ul i{
         font-size: 3rem;
     }
-    /*
-    #contact .section-content::after{
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: calc(50% - 1rem - 1px);
-        content: "";
-        background-color: var(--secondaryColor);
-        opacity: .5;
-        width: 2px;
-        height: 100%;
-        border-radius: 50px;
-    }
-        */
 }
 @media screen and (min-width: 1000px){
     #about .img-wrapper{

@@ -25,17 +25,22 @@ document.addEventListener("DOMContentLoaded",(e)=>{
             activeMenuItem = item;
         })
     })
-    setTimeout(()=>{
+    console.log(window.scrollY !== 0);
+    if(window.scrollY == 0){
+        setTimeout(()=>finishAnimation() ,8500);
+    }else{
+        finishAnimation();
+    }
+    skipBtn.addEventListener("click", finishAnimation);
+
+    function finishAnimation(){
         header.style.opacity = "1";
-        //document.getElementsByTagName("html")[0].style.overflowY = "scroll";
-        //skipBtn.style.opacity = "0";
-        //skipBtn.disabled = true;
+        document.getElementsByTagName("html")[0].style.overflowY = "scroll";
+        skipBtn.style.opacity = "0";
+        skipBtn.disabled = true;
         otherInfo.style.opacity = "1";
         socialLinks.style.opacity = "1";
-
     }
-    ,500);
-
 
     menuToggleBtn.addEventListener("click",(e)=>{
         menu.classList.toggle("hidden");
@@ -66,21 +71,13 @@ document.addEventListener("DOMContentLoaded",(e)=>{
             return data.json();
         })
         .then(json=>{
-            let dateTime = json.datetime.split(".")[0];
-            localTime.innerText = new Date(dateTime);
-            let interval = setInterval(async ()=>{
-                fetch("http://worldtimeapi.org/api/timezone/America/Vancouver")
-                .then(data=>{
-                    return data.json();
-                })
-                .then(json=>{
-                    let dateTime = json.datetime.split(".")[0];
-                    localTime.innerText = new Date(dateTime);
-                })
-                .catch(e=>{
-                    console.log(e);
-                    clearInterval(interval);
-                })        
+            const APIDateTime = json.datetime.split(".")[0];
+            let dateTime = new Date(APIDateTime);
+            dateTime.setMilliseconds(0);
+            localTime.innerText = `${dateTime.toDateString()}  ${dateTime.toLocaleTimeString()}`;
+            setInterval(async ()=>{
+                dateTime.setMilliseconds(1001);
+                localTime.innerText = `${dateTime.toDateString()}  ${dateTime.toLocaleTimeString()}`;
             },
             1000);
         })
