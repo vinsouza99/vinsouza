@@ -1,584 +1,899 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.9.2/sass.min.js" integrity="sha512-mA5b7w9mZvGLWgjIqp9KhWNzkkZ/H3gC4Ua6GOn9m/xl1UF4ghH8GsriKvAYxLsxoKvn6NdebW7kZ6iGB3CGSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.9.2/sass.min.js"
+      integrity="sha512-mA5b7w9mZvGLWgjIqp9KhWNzkkZ/H3gC4Ua6GOn9m/xl1UF4ghH8GsriKvAYxLsxoKvn6NdebW7kZ6iGB3CGSg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
     <script src="./index.js"></script>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>Vin Souza</title>
-</head>
-<body>
-    <header >
-        <div class="logo-wrapper">
-            <h1 class="visually-hidden">Vin Souza</h1>
-            <img src="./assets/logo.svg" alt="Logo">
-        </div>
-        <div class="toggle-menu-wrapper">
-            <button type="button" id="toggle-menu-btn">
-                <i class="fa-solid fa-bars" aria-hidden="true"></i>
-                <span class="visually-hidden">Open menu</span>
-            </button>
-        </div>
-        <div class="menu-wrapper hidden">
-            <nav class="main-menu">
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="https://drive.google.com/file/d/1M8NSZkn3N6qTjQwBgQh40cfjdVG9zOF2/view?usp=sharing" target="_blank" title="View my resume" id="resume-link">Resume</a></li>
-                </ul>
-            </nav>
-        </div>
+  </head>
+  <body>
+    <header>
+      <div class="logo-wrapper">
+        <h1 class="visually-hidden">Vin Souza</h1>
+        <img src="./assets/logo.svg" alt="Logo" />
+      </div>
+      <div class="toggle-menu-wrapper">
+        <button type="button" id="toggle-menu-btn">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+          <span class="visually-hidden">Open menu</span>
+        </button>
+      </div>
+      <div class="menu-wrapper">
+        <nav class="main-menu">
+          <ul id="menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1M8NSZkn3N6qTjQwBgQh40cfjdVG9zOF2/view?usp=sharing"
+                target="_blank"
+                title="View my resume"
+                id="resume-link"
+                >Resume</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
-        <section id="home">
-            <div class="text-wrapper">
-                <p class="typewriter">Hello, World!</p>
-                <h2 class="typewriter">I'm <span>Vin</span></h2>
-                <p class="typewriter">and I’m a full-stack web developer :)</p>
+      <section id="home">
+        <div class="text-wrapper">
+          <p class="typewriter">Hello, World!</p>
+          <h2 class="typewriter">I'm <span>Vin</span></h2>
+          <p class="typewriter">and I’m a full-stack web developer :)</p>
+        </div>
+        <div class="social-links">
+          <nav class="contact-menu">
+            <ul>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/vinicius-abner/"
+                  target="_blank"
+                  title="LinkedIn"
+                >
+                  <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                  <span class="visually-hidden">LinkedIn</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/vinsouza99"
+                  target="_blank"
+                  title="Github"
+                >
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  <span class="visually-hidden">Github</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="other-info">
+          <div>
+            <p><span>Location:</span> Vancouver, Canada</p>
+            <p><span>Local Time:</span> <span id="localTime"></span></p>
+          </div>
+        </div>
+        <div class="skip-btn-wrapper">
+          <button id="skipBtn">Skip</button>
+        </div>
+      </section>
+      <section id="about">
+        <div class="section-content">
+          <div class="grid-item">
+            <h2>About</h2>
+            <p class="section-description">
+              Well, my actual name is Vinícius [viˈnisjus], but Vin it's easier
+              for most people. I'm a 25 years old brazilian computer scientist
+              and full-stack web developer living in Vancouver, Canada.
+            </p>
+            <p class="section-description">
+              When I was about to try Law school, my dad took me on a private
+              tour around the Computer Science campus of the university where he
+              used to teach (he knew a guy) so I would hopefully reconsider that
+              decision. He thought IT would fit me better than Law because I'm
+              more "things-oriented" than "people-oriented" and because it is a
+              rapidly growing field that would open doors to me worldwide,
+              unlike Law. So I listened to him and gave it a try. Turns out he
+              was right!
+            </p>
+            <p class="section-description">
+              During the Computer Science program I realised how fun the whole
+              problem-solving aspect of programming is and how I liked the
+              process of creating a website. So here I am!
+            </p>
+          </div>
+          <div class="grid-item">
+            <div class="img-wrapper">
+              <img src="./assets/images/me.png" alt="Me, Myself and I" />
             </div>
-            <div class="social-links">
-                <nav class="contact-menu">
-                    <ul>
-                        <li>
-                            <a href="https://www.linkedin.com/in/vinicius-abner/" target="_blank" title="LinkedIn">
-                                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                                <span class="visually-hidden">LinkedIn</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/vinsouza99" target="_blank" title="Github">
-                                <i class="fa-brands fa-github" aria-hidden="true"></i>
-                                <span class="visually-hidden">Github</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="other-info">
-                <div>
-                    <p><span>Location:</span> Vancouver, Canada</p>
-                    <p><span>Local Time:</span> <span id="localTime"></span></p>
-                </div>
-            </div>
-            <div class="skip-btn-wrapper">
-                <button id="skipBtn">Skip</button>
-            </div>
-        </section>
-        <section id="about">
-            <div class="section-content">
-                <div class="grid-item">
-                    <h2>About</h2>
-                    <p class="section-description">Well, my actual name is Vinícius [viˈnisjus], but Vin it's easier for most people. I'm a 25 years old brazilian computer scientist and full-stack web developer living in Vancouver, Canada.</p>
-                    <p class="section-description">When I was about to try Law school, my dad took me on a private tour around the Computer Science campus of the university where he used to teach (he knew a guy) so I would hopefully reconsider that decision. He thought IT would fit me better than Law because I'm more "things-oriented" than "people-oriented" and because it is a rapidly growing field that would open doors to me worldwide, unlike Law. So I listened to him and gave it a try. Turns out he was right!</p>
-                    <p class="section-description">During the Computer Science program I realised how fun the whole problem-solving aspect of programming is and how I liked the process of creating a website. So here I am!</p>
-                </div>
-                <div class="grid-item">
+          </div>
+        </div>
+      </section>
+      <section id="skills">
+        <div class="section-content">
+          <h2>Skills</h2>
+          <div class="grid-item wrapper">
+            <p class="section-description">
+              In my short but intense journey on full-stack web development I
+              studied and worked with some of the most popular languages,
+              frameworks, tools and libraries on the market
+            </p>
+            <p class="section-description">
+              There is still so much to learn, so this list will keep growing!
+            </p>
+          </div>
+          <div class="grid-item skillset">
+            <div class="wrapper">
+              <form action="#" class="tags">
+                <label for="languageFilter" class="button-tag">
+                  Languages
+                  <input
+                    type="radio"
+                    id="languageFilter"
+                    value="language"
+                    hidden
+                    name="filter"
+                    checked
+                  />
+                </label>
+                <label for="frontendFilter" class="button-tag">
+                  Frontend
+                  <input
+                    type="radio"
+                    id="frontendFilter"
+                    value="frontend"
+                    hidden
+                    name="filter"
+                  />
+                </label>
+                <label for="infraFilter" class="button-tag">
+                  Backend
+                  <input
+                    type="radio"
+                    id="infraFilter"
+                    value="backend"
+                    hidden
+                    name="filter"
+                  />
+                </label>
+                <label for="designFilter" class="button-tag">
+                  Design
+                  <input
+                    type="radio"
+                    id="designFilter"
+                    value="design"
+                    hidden
+                    name="filter"
+                  />
+                </label>
+                <label for="othersFilter" class="button-tag">
+                  Others
+                  <input
+                    type="radio"
+                    id="othersFilter"
+                    value="other"
+                    hidden
+                    name="filter"
+                  />
+                </label>
+              </form>
+              <div class="grid-wrapper">
+                <div class="skills-grid">
+                  <button class="skill-item active" tags="language">
                     <div class="img-wrapper">
-                        <img src="./assets/images/me.png" alt="Me, Myself and I">
+                      <img src="./assets/images/html.svg" alt="HTML" />
                     </div>
-                </div>
-                
-            </div>
-        </section>
-        <section id="skills">
-            <div class="section-content">
-                <h2>Skills</h2>
-                <div class="grid-item wrapper">
-                    <p class="section-description">In my short but intense journey on full-stack web development I studied and worked with some of the most popular languages, frameworks, tools and libraries on the market</p>
-                    <p class="section-description">There is still so much to learn, so this list will keep growing!</p>
-                </div>
-                <div class="grid-item skillset">
-                    <div class="wrapper">
-                        <form action="#" class="tags">
-                            <label for="languageFilter" class="button-tag">
-                                Languages
-                                <input type="radio" id="languageFilter" value="language" hidden name="filter">
-                            </label>
-                            <label for="frontendFilter" class="button-tag">
-                                Frontend
-                                <input type="radio" id="frontendFilter" value="frontend" hidden name="filter">
-                            </label>
-                            <label for="infraFilter" class="button-tag">
-                                Backend
-                                <input type="radio" id="infraFilter" value="backend" hidden name="filter">
-                            </label>
-                            <label for="designFilter" class="button-tag">
-                                Design
-                                <input type="radio" id="designFilter" value="design" hidden name="filter">
-                            </label>
-                            <label for="othersFilter" class="button-tag">
-                                Others
-                                <input type="radio" id="othersFilter" value="other" hidden name="filter">
-                            </label>
-                        </form>
-                        <div class="grid-wrapper">
-                            <div class="skills-grid">
-                                <button class="skill-item" tags="language">
-                                    <div class="img-wrapper">
-                                        <img src="./assets/images/html.svg" alt="HTML">
-                                    </div>
-                                    <span>HTML</span>
-                                </button>
-                                <button class="skill-item" tags="language">
-                                    <div class="img-wrapper">
-                                        <img src="./assets/images/css.svg" alt="CSS">
-                                    </div>
-                                    <span>CSS</span>
-                                </button>
-                                <button class="skill-item" tags="language">
-                                    <div class="img-wrapper">
-                                        <img src="./assets/images/js.svg" alt="JavaScript">
-                                    </div>
-                                    <span>JavaScript</span>
-                                </button>
-                                <button class="skill-item" tags="language">
-                                    <div class="img-wrapper">
-                                        <img src="./assets/images/java.svg" alt="Java">
-                                    </div>
-                                    <span>Java</span>
-                                </button>
-                                <button class="skill-item" tags="language">
-                                    <div class="img-wrapper">
-                                        <img src="./assets/images/python.svg" alt="Python">
-                                    </div>
-                                    <span>Python</span>
-                                </button>
-                                <button class="skill-item" tags="language">
-                                    <div class="img-wrapper">
-                                        <img src="./assets/images/csharp.svg" alt="C Sharp">
-                                    </div>
-                                    <span>C#</span>
-                                </button>
-                                <button class="skill-item" tags="frontend">
-                                    <div class="img-wrapper">
-                                        <img src="./assets/images/angular.svg" alt="Angular">
-                                    </div>
-                                    <span>Angular</span>
-                                </button>
-                                <button class="skill-item" tags="frontend">
-                                    <div class="img-wrapper">
-                                        <img src="./assets/images/react.svg" alt="React">
-                                    </div>
-                                    <span>React</span>
-                                </button>
-                                <button class="skill-item" tags="backend">
-                                    <div class="img-wrapper">
-                                        <img src="./assets/images/node.svg" alt="Node JS">
-                                    </div>
-                                    <span>Node JS</span>
-                                </button>
-                                <button class="skill-item" tags="backend">
-                                    <div class="img-wrapper">
-                                        <img src="./assets/images/dotnet.svg" alt="Dot Net">
-                                    </div>
-                                    <span>.NET</span>
-                                </button>
-                                <button class="skill-item" tags="backend">
-                                    <div class="img-wrapper">
-                                        <img src="./assets/images/firebase.svg" alt="Firebase">
-                                    </div>
-                                    <span>Firebase</span>
-                                </button>
-                                <button class="skill-item" tags="backend">
-                                    <div class="img-wrapper">
-                                        <img src="./assets/images/springboot.png" alt="Springboot">
-                                    </div>
-                                    <span>Springboot</span>
-                                </button>
-                                <button class="skill-item" tags="backend">
-                                    <div class="img-wrapper">
-                                        <img src="./assets/images/express.svg" alt="Express">
-                                    </div>
-                                    <span>Express</span>
-                                </button>
-                                <button class="skill-item" tags="backend">
-                                    <div class="img-wrapper">
-                                        <img src="./assets/images/sql.svg" alt="SQL">
-                                    </div>
-                                    <span>SQL</span>
-                                </button>
-                                <button class="skill-item" tags="backend">
-                                    <div class="img-wrapper">
-                                        <img src="./assets/images/nosql.svg" alt="No SQL">
-                                    </div>
-                                    <span>NoSQL</span>
-                                </button>
-                                <button class="skill-item" tags="design">
-                                    <div class="img-wrapper">
-                                        <img src="./assets/images/figma.svg" alt="Figma">
-                                    </div>
-                                    <span>Figma</span>
-                                </button>
-                                <button class="skill-item" tags="design">
-                                    <div class="img-wrapper">
-                                        <img src="./assets/images/illustrator.svg" alt="Illustrator">
-                                    </div>
-                                    <span>Illustrator</span>
-                                </button>
-                                <button class="skill-item" tags="other">
-                                    <div class="img-wrapper">
-                                        <img src="./assets/images/wordpress.svg" alt="Illustrator">
-                                    </div>
-                                    <span>Wordpress</span>
-                                </button>
-                            </div>
-                        </div>
+                    <span>HTML</span>
+                  </button>
+                  <button class="skill-item active" tags="language">
+                    <div class="img-wrapper">
+                      <img src="./assets/images/css.svg" alt="CSS" />
                     </div>
+                    <span>CSS</span>
+                  </button>
+                  <button class="skill-item active" tags="language">
+                    <div class="img-wrapper">
+                      <img src="./assets/images/js.svg" alt="JavaScript" />
+                    </div>
+                    <span>JavaScript</span>
+                  </button>
+                  <button class="skill-item active" tags="language">
+                    <div class="img-wrapper">
+                      <img src="./assets/images/java.svg" alt="Java" />
+                    </div>
+                    <span>Java</span>
+                  </button>
+                  <button class="skill-item active" tags="language">
+                    <div class="img-wrapper">
+                      <img src="./assets/images/python.svg" alt="Python" />
+                    </div>
+                    <span>Python</span>
+                  </button>
+                  <button class="skill-item active" tags="language">
+                    <div class="img-wrapper">
+                      <img src="./assets/images/csharp.svg" alt="C Sharp" />
+                    </div>
+                    <span>C#</span>
+                  </button>
+                  <button class="skill-item" tags="frontend">
+                    <div class="img-wrapper">
+                      <img src="./assets/images/angular.svg" alt="Angular" />
+                    </div>
+                    <span>Angular</span>
+                  </button>
+                  <button class="skill-item" tags="frontend">
+                    <div class="img-wrapper">
+                      <img src="./assets/images/react.svg" alt="React" />
+                    </div>
+                    <span>React</span>
+                  </button>
+                  <button class="skill-item" tags="backend">
+                    <div class="img-wrapper">
+                      <img src="./assets/images/node.svg" alt="Node JS" />
+                    </div>
+                    <span>Node JS</span>
+                  </button>
+                  <button class="skill-item" tags="backend">
+                    <div class="img-wrapper">
+                      <img src="./assets/images/dotnet.svg" alt="Dot Net" />
+                    </div>
+                    <span>.NET</span>
+                  </button>
+                  <button class="skill-item" tags="backend">
+                    <div class="img-wrapper">
+                      <img src="./assets/images/firebase.svg" alt="Firebase" />
+                    </div>
+                    <span>Firebase</span>
+                  </button>
+                  <button class="skill-item" tags="backend">
+                    <div class="img-wrapper">
+                      <img
+                        src="./assets/images/springboot.png"
+                        alt="Springboot"
+                      />
+                    </div>
+                    <span>Springboot</span>
+                  </button>
+                  <button class="skill-item" tags="backend">
+                    <div class="img-wrapper">
+                      <img src="./assets/images/express.svg" alt="Express" />
+                    </div>
+                    <span>Express</span>
+                  </button>
+                  <button class="skill-item" tags="backend">
+                    <div class="img-wrapper">
+                      <img src="./assets/images/sql.svg" alt="SQL" />
+                    </div>
+                    <span>SQL</span>
+                  </button>
+                  <button class="skill-item" tags="backend">
+                    <div class="img-wrapper">
+                      <img src="./assets/images/nosql.svg" alt="No SQL" />
+                    </div>
+                    <span>NoSQL</span>
+                  </button>
+                  <button class="skill-item" tags="design">
+                    <div class="img-wrapper">
+                      <img src="./assets/images/figma.svg" alt="Figma" />
+                    </div>
+                    <span>Figma</span>
+                  </button>
+                  <button class="skill-item" tags="design">
+                    <div class="img-wrapper">
+                      <img
+                        src="./assets/images/illustrator.svg"
+                        alt="Illustrator"
+                      />
+                    </div>
+                    <span>Illustrator</span>
+                  </button>
+                  <button class="skill-item" tags="other">
+                    <div class="img-wrapper">
+                      <img
+                        src="./assets/images/wordpress.svg"
+                        alt="Illustrator"
+                      />
+                    </div>
+                    <span>Wordpress</span>
+                  </button>
                 </div>
+              </div>
             </div>
-        </section>
-        <section id="portfolio">
-            <div class="section-content">
-                <div class="grid-item">
-                    <h2>Portfolio</h2>
-                    <p class="section-description">
-                        The thing that drew me towards web development in the first place was the process itself. It is fun, despite all the work required to pull something cool off. During me studies, both formal and self-conducted, I've built many things I'm proud of. Here are some of them!
+          </div>
+        </div>
+      </section>
+      <section id="portfolio">
+        <div class="section-content">
+          <div class="grid-item">
+            <h2>Portfolio</h2>
+            <p class="section-description">
+              The thing that drew me towards web development in the first place
+              was the process itself. It is fun, despite all the work required
+              to pull something cool off. During me studies, both formal and
+              self-conducted, I've built many things I'm proud of. Here are some
+              of them!
+            </p>
+          </div>
+          <div class="grid-item portfolio">
+            <div class="top-3-wrapper">
+              <div class="portfolio-item-container">
+                <div class="portfolio-item card top3">
+                  <div class="thumbnail-wrapper">
+                    <img src="./assets/images/favr.png" alt="Item" />
+                  </div>
+                  <div class="details">
+                    <div class="title">
+                      <h3>
+                        <a href="https://favr.onrender.com/" target="_blank"
+                          >Favr
+                          <i class="fa-solid fa-arrow-up-right-from-square"></i
+                        ></a>
+                      </h3>
+                      <span class="type">Web</span>
+                    </div>
+                    <p class="description">
+                      Favr is a PWA that improves the life quality of senior
+                      citizens by connecting them with volunteer students
                     </p>
-                </div>
-                <div class="grid-item portfolio">
-                    <div class="top-3-wrapper">
-                        <div class="portfolio-item-container">
-                            <div class="portfolio-item card top3">
-                                <div class="thumbnail-wrapper">
-                                    <img src="./assets/images/favr.png" alt="Item">
-                                </div>
-                                <div class="details">
-                                    <div class="title"><h3><a href="https://favr.onrender.com/" target="_blank" >Favr <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3><span class="type">Web</span></div>
-                                    <p class="description">Favr is a PWA that improves the life quality of senior citizens by connecting them with volunteer students</p>
-                                    <div class="tags">
-                                        <div class="tag" tags="web,html"><span>HTML</span></div>
-                                        <div class="tag" tags="web,css"><span>CSS</span></div>
-                                        <div class="tag" tags="web,javascript"><span>JavaScript</span></div>
-                                        <div class="tag" tags="web,firebase"><span>Firebase</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item-container">
-                            <div class="portfolio-item card top3">
-                                <div class="thumbnail-wrapper">
-                                    <img src="./assets/images/react-calculator.png" alt="Item">
-                                </div>
-                                <div class="details">
-                                    <div class="title"><h3><a href="https://github.com/vinsouza99/React-Calculator" target="_blank" >React Calculator <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3><span class="type">Web</span></div>
-                                    <p class="description">Favr is a PWA that improves the life quality of senior citizens by connecting them with volunteer students</p>
-                                    <div class="tags">
-                                        <div class="tag" tags="web,html"><span>HTML</span></div>
-                                        <div class="tag" tags="web,css"><span>CSS</span></div>
-                                        <div class="tag" tags="web,javascript"><span>JavaScript</span></div>
-                                        <div class="tag" tags="web"><span>React</span></div>
-                                        <div class="tag" tags="web"><span>Node JS</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item-container">
-                            <div class="portfolio-item card top3">
-                                <div class="thumbnail-wrapper">
-                                    <img src="./assets/images/tourOfHeroes.png" alt="Item">
-                                </div>
-                                <div class="details">
-                                    <div class="title"><h3><a href="https://github.com/vinsouza99/TourOfHeroes" target="_blank" >Tour of Heroes <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3><span class="type">Web</span></div>
-                                    <p class="description">Favr is a PWA that improves the life quality of senior citizens by connecting them with volunteer students</p>
-                                    <div class="tags">
-                                        <div class="tag" tags="web,html"><span>HTML</span></div>
-                                        <div class="tag" tags="web,css"><span>CSS</span></div>
-                                        <div class="tag" tags="web,javascript"><span>JavaScript</span></div>
-                                        <div class="tag" tags="web"><span>Angular</span></div>
-                                        <div class="tag" tags="web"><span>Typescript</span></div>
-                                        <div class="tag" tags="web"><span>Node JS</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="tags">
+                      <div class="tag" tags="web,html"><span>HTML</span></div>
+                      <div class="tag" tags="web,css"><span>CSS</span></div>
+                      <div class="tag" tags="web,javascript">
+                        <span>JavaScript</span>
+                      </div>
+                      <div class="tag" tags="web,firebase">
+                        <span>Firebase</span>
+                      </div>
                     </div>
-                    <div class="grid-wrapper">
-                        <h3 class="sub-section-title">Other projects</h3>
-                        <div class="portfolio-grid">
-                            <div class="portfolio-item-container">
-                                <div class="portfolio-item card">
-                                    <div class="thumbnail-wrapper">
-                                        <img src="./assets/images/favr.png" alt="Item">
-                                    </div>
-                                    <div class="details">
-                                        <div class="title"><h3><a href="https://yoshan0921.github.io/" target="_blank" >Favr <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3><span class="type">Web</span></div>
-                                        <p class="description">Favr is a PWA that improves the life quality of senior citizens by connecting them with volunteer students</p>
-                                        <div class="tags">
-                                            <div class="tag" tags="web,html"><span>HTML</span></div>
-                                            <div class="tag" tags="web,css"><span>CSS</span></div>
-                                            <div class="tag" tags="web,javascript"><span>JavaScript</span></div>
-                                            <div class="tag" tags="web,firebase"><span>Firebase</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="portfolio-item-container">
-                                <div class="portfolio-item card">
-                                    <div class="thumbnail-wrapper">
-                                        <img src="./assets/images/favr.png" alt="Item">
-                                    </div>
-                                    <div class="details">
-                                        <div class="title"><h3><a href="https://yoshan0921.github.io/" target="_blank" >Favr <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3><span class="type">Web</span></div>
-                                        <p class="description">Favr is a PWA that improves the life quality of senior citizens by connecting them with volunteer students</p>
-                                        <div class="tags">
-                                            <div class="tag" tags="web,html"><span>HTML</span></div>
-                                            <div class="tag" tags="web,css"><span>CSS</span></div>
-                                            <div class="tag" tags="web,javascript"><span>JavaScript</span></div>
-                                            <div class="tag" tags="web,firebase"><span>Firebase</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="portfolio-item-container">
-                                <div class="portfolio-item card">
-                                    <div class="thumbnail-wrapper">
-                                        <img src="./assets/images/favr.png" alt="Item">
-                                    </div>
-                                    <div class="details">
-                                        <div class="title"><h3><a href="https://yoshan0921.github.io/" target="_blank" >Favr <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3><span class="type">Web</span></div>
-                                        <p class="description">Favr is a PWA that improves the life quality of senior citizens by connecting them with volunteer students</p>
-                                        <div class="tags">
-                                            <div class="tag" tags="web,html"><span>HTML</span></div>
-                                            <div class="tag" tags="web,css"><span>CSS</span></div>
-                                            <div class="tag" tags="web,javascript"><span>JavaScript</span></div>
-                                            <div class="tag" tags="web,firebase"><span>Firebase</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="portfolio-item-container">
-                                <div class="portfolio-item card">
-                                    <div class="thumbnail-wrapper">
-                                        <img src="./assets/images/favr.png" alt="Item">
-                                    </div>
-                                    <div class="details">
-                                        <div class="title"><h3><a href="https://yoshan0921.github.io/" target="_blank" >Favr <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3><span class="type">Web</span></div>
-                                        <p class="description">Favr is a PWA that improves the life quality of senior citizens by connecting them with volunteer students</p>
-                                        <div class="tags">
-                                            <div class="tag" tags="web,html"><span>HTML</span></div>
-                                            <div class="tag" tags="web,css"><span>CSS</span></div>
-                                            <div class="tag" tags="web,javascript"><span>JavaScript</span></div>
-                                            <div class="tag" tags="web,firebase"><span>Firebase</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="portfolio-item-container">
-                                <div class="portfolio-item card">
-                                    <div class="thumbnail-wrapper">
-                                        <img src="./assets/images/resume.png" alt="Item">
-                                    </div>
-                                    <div class="details">
-                                        <div class="title"><h3><a href="https://github.com/vinsouza99/vinsouza" target="_blank" >This site itself! <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3><span class="type">Web</span></div>
-                                        <p class="description">This very website was very challenging for me. Not only I did the design myself while trying to put as much of my personality into it, but the frontend coding of it was among one of the trickiests I had to do so far. It was worth it.</p>
-                                        <div class="tags">
-                                            <div class="tag" tags="web,html"><span>HTML</span></div>
-                                            <div class="tag" tags="web,css"><span>CSS</span></div>
-                                            <div class="tag" tags="web,javascript"><span>JavaScript</span></div>
-                                            <div class="tag"><span>Illustrator</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="view-more">
-                                <a href="https://github.com/vinsouza99"><i class="fa-brands fa-github" aria-hidden="true"></i> View more <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    
+                  </div>
                 </div>
+              </div>
+              <div class="portfolio-item-container">
+                <div class="portfolio-item card top3">
+                  <div class="thumbnail-wrapper">
+                    <img src="./assets/images/bodybuddy.png" alt="Item" />
+                  </div>
+                  <div class="details">
+                    <div class="title">
+                      <h3>
+                        <a href="https://bodybuddy.me" target="_blank"
+                          >BodyBuddy
+                          <i class="fa-solid fa-arrow-up-right-from-square"></i
+                        ></a>
+                      </h3>
+                      <span class="type">Web</span>
+                    </div>
+                    <p class="description">
+                      BodyBuddy is an AI-powered fitness web platform for people
+                      who want to exercise in their own homes or on the go, at
+                      their own pace. The AI analysis checks your form in
+                      real-time, ensuring correct posture for a safe and
+                      effective workout. It also helps you create personalized
+                      workout plans based on your fitness level and goals. Plus,
+                      the progress dashboard keeps you motivated, making it
+                      easier to stay on track and maintain a regular workout
+                      routine, even when exercising alone
+                    </p>
+                    <div class="tags">
+                      <div class="tag" tags="web,html"><span>React</span></div>
+                      <div class="tag" tags="web,css"><span>SQL</span></div>
+                      <div class="tag" tags="web,javascript">
+                        <span>Node.js</span>
+                      </div>
+                      <div class="tag" tags="web,react">
+                        <span>Express</span>
+                      </div>
+                      <div class="tag" tags="web,node">
+                        <span>Material UI</span>
+                      </div>
+                      <div class="tag" tags="web,node">
+                        <span>MediaPipe</span>
+                      </div>
+                      <div class="tag" tags="web,node"><span>JWT</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-item-container">
+                <div class="portfolio-item card top3">
+                  <div class="thumbnail-wrapper">
+                    <img src="./assets/images/JSnake.png" alt="Item" />
+                  </div>
+                  <div class="details">
+                    <div class="title">
+                      <h3>
+                        <a
+                          href="https://github.com/vinsouza99/jsnake"
+                          target="_blank"
+                          >JSnake
+                          <i class="fa-solid fa-arrow-up-right-from-square"></i
+                        ></a>
+                      </h3>
+                      <span class="type">Web</span>
+                    </div>
+                    <p class="description">
+                      JSnake is a website where you can play the classic snake
+                      game written in JavaScript. This was my final project for
+                      the Harvard's CS50 Web Programming with Python and
+                      JavaScript Professional Certificate program.
+                    </p>
+                    <div class="tags">
+                      <div class="tag" tags="web,html"><span>HTML</span></div>
+                      <div class="tag" tags="web,css"><span>CSS</span></div>
+                      <div class="tag" tags="web,javascript">
+                        <span>Python</span>
+                      </div>
+                      <div class="tag" tags="web,firebase">
+                        <span>Django</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
-        <section id="experience">
-            <div class="section-content">
-                <div class="experience-grid">
-                    <div class="wrapper">
-                        <h2>Experience</h2>
-                        <p class="section-description">Although my history with web development and programming has been intense and driven mostly by self-learning and lone projects, there are some milestones that provided me significant personal and professional growth experiences during this journey</p>
+            <div class="grid-wrapper">
+              <h3 class="sub-section-title">Other projects</h3>
+              <div class="portfolio-grid">
+                <div class="portfolio-item-container">
+                  <div class="portfolio-item card">
+                    <div class="thumbnail-wrapper">
+                      <img src="./assets/images/tourOfHeroes.png" alt="Item" />
                     </div>
-                    <div class="row item-4">
-                        <div class="experience-item-wrapper">
-                            <div class="experience-item">
-                                <div class="experience-type">
-                                    <div class="img-wrapper">
-                                        <img src="./assets/images/type-education.svg" alt="">
-                                    </div>
-                                    <div class="line"></div>
-                                    <div class="year">
-                                        <span>2024</span>
-                                    </div>
-                                </div>
-                                <div class="experience-details show">
-                                    <h3 class="experience-name">Post Degree in Web & Mobile App Design & Development</h3>
-                                    <h4 class="experience-place">Langara College, Canada</h4>
-                                    <p class="experience-description">Currently I'm pursuing the 18 months Post-Degree Diploma in Web and Mobile App Design & Development program with the expected graduation being Summer 2025.</p>
-                                    <div class="tags">
-                                        <div class="tag">WordPress</div>
-                                        <div class="tag">UX/UI</div>
-                                        <div class="tag">Firebase</div>
-                                        <div class="tag">React</div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="details">
+                      <div class="title">
+                        <h3>
+                          <a
+                            href="https://github.com/vinsouza99/TourOfHeroes"
+                            target="_blank"
+                            >Tour of Heroes
+                            <i
+                              class="fa-solid fa-arrow-up-right-from-square"
+                            ></i
+                          ></a>
+                        </h3>
+                        <span class="type">Web</span>
+                      </div>
+                      <p class="description">
+                        This is my first SPA with Angular. It is a
+                        wikipedia-like website about Marvel's characters and it
+                        was built based on the tutorial available on Angular's
+                        website.
+                      </p>
+                      <div class="tags">
+                        <div class="tag" tags="web,html"><span>HTML</span></div>
+                        <div class="tag" tags="web,css"><span>CSS</span></div>
+                        <div class="tag" tags="web"><span>Angular</span></div>
+                        <div class="tag" tags="web">
+                          <span>Typescript</span>
                         </div>
-                        
+                        <div class="tag" tags="web"><span>Node JS</span></div>
+                      </div>
                     </div>
-                    <div class="row item-3">
-                        <div class="experience-item-wrapper">
-                            <div class="experience-item">
-                                <div class="experience-type">
-                                    <div class="img-wrapper">
-                                        <img src="./assets/images/type-work.png" alt="">
-                                    </div>
-                                    <div class="line"></div>
-                                    <div class="year">
-                                        <span>2023</span>
-                                    </div>
-                                </div>
-                                <div class="experience-details">
-                                    <h3 class="experience-name">Backend Developer</h3>
-                                    <h4 class="experience-place">Wipro, Brazil</h4>
-                                    <p class="experience-description">As a full-stack .NET developer, my team and I would work on web applications for the Transit Department of my homestate in Brazil, which were to be used by million of drivers and officers. More especifically, the app I was responsible for most of the time was a vehicle control system that allowed services scheduling, vehicle registration and updating, and reports generation.</p>
-                                    <div class="tags">
-                                        <div class="tag">.NET</div>
-                                        <div class="tag">C#</div>
-                                        <div class="tag">SCRUM</div>
-                                        <div class="tag">SQL</div>
-                                        <div class="tag">Software Engineering</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="row  item-2">
-                        <div class="experience-item-wrapper">
-                            <div class="experience-item">
-                                <div class="experience-type">
-                                    <div class="img-wrapper">
-                                        <img src="./assets/images/type-work.svg" alt="">
-                                    </div>
-                                    <div class="line"></div>
-                                    <div class="year">
-                                        <span>2021 - 2022</span>
-                                    </div>
-                                </div>
-                                <div class="experience-details">
-                                    <h3 class="experience-name">Web Development Intern</h3>
-                                    <h4 class="experience-place">Millennium IE, Brazil</h4>
-                                    <p class="experience-description">Millennium IE is a local printshop based on the same city I went to university. The apps I worked in were different web-based control systems for both the company's employees and clients. My biggest legacy there was a program written in Java that automatized the very tiring and time-consuming task of gathering data from an API and storing in the database.</p>
-                                    <div class="tags">
-                                        <div class="tag">HTML</div>
-                                        <div class="tag">CSS</div>
-                                        <div class="tag">Java</div>
-                                        <div class="tag">SQL</div>
-                                        <div class="tag">UX/UI</div>
-                                        <div class="tag">Software Engineering</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="row item-1">
-                        <div class="experience-item-wrapper">
-                            <div class="experience-item">
-                                <div class="experience-type">
-                                    <div class="img-wrapper">
-                                        <img src="./assets/images/type-education.svg" alt="">
-                                    </div>
-                                    <div class="line"></div>
-                                    <div class="year">
-                                        <span>2018 - 2023</span>
-                                    </div>
-                                </div>
-                                <div class="experience-details">
-                                    <h3 class="experience-name">Bachelor in Computer Science</h3>
-                                    <h4 class="experience-place">UFCG, Brazil</h4>
-                                    <p class="experience-description">The UFCG Computer Science course is one of the oldest and most celebrated in the IT field throughout Brazil. The four years program taught me a little bit of everything about computers, and it helped me to discover my love for web development!</p>
-                                    <div class="tags">
-                                        <div class="tag">Java</div>
-                                        <div class="tag">Python</div>
-                                        <div class="tag">OOP</div>
-                                        <div class="tag">React</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
+                  </div>
                 </div>
+                <div class="portfolio-item-container">
+                  <div class="portfolio-item card">
+                    <div class="thumbnail-wrapper">
+                      <img src="./assets/images/jokenpo.png" alt="Item" />
+                    </div>
+                    <div class="details">
+                      <div class="title">
+                        <h3>
+                          <a
+                            href="https://vinsouza99.github.io/JoKenPo/html/index.html"
+                            target="_blank"
+                            >Jo Ken Po
+                            <i
+                              class="fa-solid fa-arrow-up-right-from-square"
+                            ></i
+                          ></a>
+                        </h3>
+                        <span class="type">Web</span>
+                      </div>
+                      <p class="description">
+                        This is my solution for the 3rd assignment of the web
+                        development program offered by Brainnest. For this
+                        assignment, I had to program a simple Jo Ken Po game
+                        (aka Rock & Paper & Scissors) in JavaScript.
+                      </p>
+                      <div class="tags">
+                        <div class="tag" tags="web,html"><span>HTML</span></div>
+                        <div class="tag" tags="web,css"><span>CSS</span></div>
+                        <div class="tag" tags="web,javascript">
+                          <span>JavaScript</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-item-container">
+                  <div class="portfolio-item card">
+                    <div class="thumbnail-wrapper">
+                      <img
+                        src="./assets/images/react-calculator.png"
+                        alt="Item"
+                      />
+                    </div>
+                    <div class="details">
+                      <div class="title">
+                        <h3>
+                          <a
+                            href="https://github.com/vinsouza99/React-Calculator"
+                            target="_blank"
+                            >React Calculator
+                            <i
+                              class="fa-solid fa-arrow-up-right-from-square"
+                            ></i
+                          ></a>
+                        </h3>
+                        <span class="type">Web</span>
+                      </div>
+                      <p class="description">
+                        This is a simple calculator application built with React
+                      </p>
+                      <div class="tags">
+                        <div class="tag" tags="web,html"><span>HTML</span></div>
+                        <div class="tag" tags="web,css"><span>CSS</span></div>
+                        <div class="tag" tags="web,javascript">
+                          <span>JavaScript</span>
+                        </div>
+                        <div class="tag" tags="web,firebase">
+                          <span>React</span>
+                        </div>
+                        <div class="tag" tags="web,firebase">
+                          <span>NodeJS</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-item-container">
+                  <div class="portfolio-item card">
+                    <div class="thumbnail-wrapper">
+                      <img
+                        src="./assets/images/react-control-system.png"
+                        alt="Item"
+                      />
+                    </div>
+                    <div class="details">
+                      <div class="title">
+                        <h3>
+                          <a
+                            href="https://github.com/vinsouza99/React-Control-System"
+                            target="_blank"
+                            >React Control System
+                            <i
+                              class="fa-solid fa-arrow-up-right-from-square"
+                            ></i
+                          ></a>
+                        </h3>
+                        <span class="type">Web</span>
+                      </div>
+                      <p class="description">
+                        This was my first React app I built as part of a Udemy
+                        course some years ago. Despite being simple, it taught
+                        me the most important concepts and practices related to
+                        React, and this knowledge was extremely helpful on my
+                        future endeavours.
+                      </p>
+                      <div class="tags">
+                        <div class="tag" tags="web,html"><span>HTML</span></div>
+                        <div class="tag" tags="web,css"><span>CSS</span></div>
+                        <div class="tag" tags="web,javascript">
+                          <span>JavaScript</span>
+                        </div>
+                        <div class="tag" tags="web,react">
+                          <span>React</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-item-container">
+                  <div class="portfolio-item card">
+                    <div class="thumbnail-wrapper">
+                      <img src="./assets/images/resume.png" alt="Item" />
+                    </div>
+                    <div class="details">
+                      <div class="title">
+                        <h3>
+                          <a
+                            href="https://github.com/vinsouza99/vinsouza"
+                            target="_blank"
+                            >This site itself!
+                            <i
+                              class="fa-solid fa-arrow-up-right-from-square"
+                            ></i
+                          ></a>
+                        </h3>
+                        <span class="type">Web</span>
+                      </div>
+                      <p class="description">
+                        This very website was very challenging for me. Not only
+                        I did the design myself while trying to put as much of
+                        my personality into it, but the frontend coding of it
+                        was among one of the trickiests I had to do so far. It
+                        was worth it.
+                      </p>
+                      <div class="tags">
+                        <div class="tag" tags="web,html"><span>HTML</span></div>
+                        <div class="tag" tags="web,css"><span>CSS</span></div>
+                        <div class="tag" tags="web,javascript">
+                          <span>JavaScript</span>
+                        </div>
+                        <div class="tag"><span>Illustrator</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="view-more">
+                  <a href="https://github.com/vinsouza99"
+                    ><i class="fa-brands fa-github" aria-hidden="true"></i> View
+                    more
+                    <i
+                      class="fa-solid fa-arrow-up-right-from-square"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                </div>
+              </div>
             </div>
-        </section>
-        <section id="contact">
-            <div class="section-content">
-                <h2>Contact</h2>
-                <div class="grid-item">
-                    <p class="section-description">Reach out to me on social media!</p>
-                    <div class="social-links">
-                        <nav class="contact-menu">
-                            <ul>
-                                <li>
-                                    <a href="https://www.linkedin.com/in/vinicius-abner/" target="_blank" title="LinkedIn">
-                                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                                        <span class="visually-hidden">LinkedIn</span>
-                                        <span>/in/vinicius-abner</span>
-
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="mailto:vinsouza1039@gmail.com" target="_blank" title="Email">
-                                        <i class="fa-regular fa-envelope" aria-hidden="true"></i>
-                                        <span class="visually-hidden">Email</span>
-                                        <span>vinsouza1039@gmail.com</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/in/vinicius-abner/" target="_blank" title="Instagram">
-                                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                                        <span class="visually-hidden">Instagram</span>
-                                        <span>@vinsouz99</span>
-
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://wa.me/12366609875" target="_blank" title="Whatsapp">
-                                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-                                        <span>Whatsapp</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div class="grid-item">
-                    <p class="section-description">Or send me an email!</p>
-                    <form action="post">
-                        <div class="form-group">
-                            <label for="contactName">Your Name</label>
-                            <input type="text" name="contactName" id="contactName" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea  name="message" id="Message" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit">Send</button>
-                        </div>
-                    </form>
-                </div>
+          </div>
+        </div>
+      </section>
+      <section id="experience">
+        <div class="section-content">
+          <div class="experience-grid">
+            <div class="wrapper">
+              <h2>Experience</h2>
+              <p class="section-description">
+                Although my history with web development and programming has
+                been intense and driven mostly by self-learning and lone
+                projects, there are some milestones that provided me significant
+                personal and professional growth experiences during this journey
+              </p>
             </div>
-        </section>
+            <div class="row item-4">
+              <div class="experience-item-wrapper">
+                <div class="experience-item">
+                  <div class="experience-type">
+                    <div class="img-wrapper">
+                      <img src="./assets/images/type-education.svg" alt="" />
+                    </div>
+                    <div class="line"></div>
+                    <div class="year">
+                      <span>2024</span>
+                    </div>
+                  </div>
+                  <div class="experience-details show">
+                    <h3 class="experience-name">
+                      Post Degree in Web & Mobile App Design & Development
+                    </h3>
+                    <h4 class="experience-place">Langara College, Canada</h4>
+                    <p class="experience-description">
+                      Currently I'm pursuing the 18 months Post-Degree Diploma
+                      in Web and Mobile App Design & Development program with
+                      the expected graduation being Summer 2025.
+                    </p>
+                    <div class="tags">
+                      <div class="tag">WordPress</div>
+                      <div class="tag">UX/UI</div>
+                      <div class="tag">Firebase</div>
+                      <div class="tag">React</div>
+                      <div class="tag">Project Management</div>
+                      <div class="tag">Mobile Development</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row item-3">
+              <div class="experience-item-wrapper">
+                <div class="experience-item">
+                  <div class="experience-type">
+                    <div class="img-wrapper">
+                      <img src="./assets/images/type-work.png" alt="" />
+                    </div>
+                    <div class="line"></div>
+                    <div class="year">
+                      <span>2023</span>
+                    </div>
+                  </div>
+                  <div class="experience-details">
+                    <h3 class="experience-name">Backend Developer</h3>
+                    <h4 class="experience-place">Wipro, Brazil</h4>
+                    <p class="experience-description">
+                      As a full-stack .NET developer, my team and I would work
+                      on web applications for the Transit Department of my
+                      homestate in Brazil, which were to be used by million of
+                      drivers and officers. More especifically, the app I was
+                      responsible for most of the time was a vehicle control
+                      system that allowed services scheduling, vehicle
+                      registration and updating, and reports generation.
+                    </p>
+                    <div class="tags">
+                      <div class="tag">.NET</div>
+                      <div class="tag">C#</div>
+                      <div class="tag">SCRUM</div>
+                      <div class="tag">SQL</div>
+                      <div class="tag">Software Engineering</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row item-2">
+              <div class="experience-item-wrapper">
+                <div class="experience-item">
+                  <div class="experience-type">
+                    <div class="img-wrapper">
+                      <img src="./assets/images/type-work.svg" alt="" />
+                    </div>
+                    <div class="line"></div>
+                    <div class="year">
+                      <span>2021 - 2022</span>
+                    </div>
+                  </div>
+                  <div class="experience-details">
+                    <h3 class="experience-name">Web Development Intern</h3>
+                    <h4 class="experience-place">Millennium IE, Brazil</h4>
+                    <p class="experience-description">
+                      Millennium IE is a local printshop based on the same city
+                      I went to university. The apps I worked in were different
+                      web-based control systems for both the company's employees
+                      and clients. My biggest legacy there was a program written
+                      in Java that automatized the very tiring and
+                      time-consuming task of gathering data from an API and
+                      storing in the database.
+                    </p>
+                    <div class="tags">
+                      <div class="tag">HTML</div>
+                      <div class="tag">CSS</div>
+                      <div class="tag">Java</div>
+                      <div class="tag">SQL</div>
+                      <div class="tag">UX/UI</div>
+                      <div class="tag">Software Engineering</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row item-1">
+              <div class="experience-item-wrapper">
+                <div class="experience-item">
+                  <div class="experience-type">
+                    <div class="img-wrapper">
+                      <img src="./assets/images/type-education.svg" alt="" />
+                    </div>
+                    <div class="line"></div>
+                    <div class="year">
+                      <span>2018 - 2023</span>
+                    </div>
+                  </div>
+                  <div class="experience-details">
+                    <h3 class="experience-name">
+                      Bachelor in Computer Science
+                    </h3>
+                    <h4 class="experience-place">UFCG, Brazil</h4>
+                    <p class="experience-description">
+                      The UFCG Computer Science course is one of the oldest and
+                      most celebrated in the IT field throughout Brazil. The
+                      four years program taught me a little bit of everything
+                      about computers, and it helped me to discover my love for
+                      web development!
+                    </p>
+                    <div class="tags">
+                      <div class="tag">Java</div>
+                      <div class="tag">Python</div>
+                      <div class="tag">OOP</div>
+                      <div class="tag">React</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="section-content">
+          <h2>Contact</h2>
+          <div class="grid-item">
+            <p class="section-description">Reach out to me on social media!</p>
+            <div class="social-links">
+              <nav class="contact-menu">
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/vinicius-abner/"
+                      target="_blank"
+                      title="LinkedIn"
+                    >
+                      <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                      <span class="visually-hidden">LinkedIn</span>
+                      <span>/in/vinicius-abner</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="mailto:vinsouza1039@gmail.com"
+                      target="_blank"
+                      title="Email"
+                    >
+                      <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                      <span class="visually-hidden">Email</span>
+                      <span>vinsouza1039@gmail.com</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/vinicius-abner/"
+                      target="_blank"
+                      title="Instagram"
+                    >
+                      <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                      <span class="visually-hidden">Instagram</span>
+                      <span>@vinsouz99</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://wa.me/12366609875"
+                      target="_blank"
+                      title="Whatsapp"
+                    >
+                      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                      <span>WhatsApp</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="grid-item">
+            <p class="section-description">Or send me an email!</p>
+            <form action="post">
+              <div class="form-group">
+                <label for="contactName">Your Name</label>
+                <input
+                  type="text"
+                  name="contactName"
+                  id="contactName"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea name="message" id="Message" required></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer>
-        Vin Souza &copy; 2024
-    </footer>
-    
-</body>
+    <footer>Vin Souza &copy; <span id="currentYear"></span></footer>
+  </body>
 </html>
