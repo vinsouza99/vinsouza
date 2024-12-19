@@ -297,6 +297,7 @@ nav ul {
 #home .text-wrapper .typewriter:nth-child(3) {
   animation: typing 2.5s 6.5s steps(40, end) forwards,
     blink-caret 1s 5.8s step-end infinite;
+  font-size: clamp(0.5rem, 3vw, 1.5rem);
 }
 
 /* The typing effect */
@@ -321,7 +322,7 @@ nav ul {
 }
 #home h2 {
   margin: 0;
-  font-size: 4.5rem;
+  font-size: clamp(1rem, 15vw, 4.5rem);
 }
 #home h2 span {
   color: var(--tertiaryColor);
