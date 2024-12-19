@@ -501,6 +501,9 @@ nav ul {
 .top-3-wrapper {
   padding-bottom: 2rem;
 }
+.portfolio-item.top3 h3 {
+  font-size: 2rem;
+}
 .portfolio .sub-section-title {
   margin: 2rem 0;
   text-align: center;
@@ -592,8 +595,6 @@ nav ul {
   opacity: 0;
 }
 .portfolio-item .details p {
-  display: flex;
-  flex-grow: 1;
   line-height: 1.15;
 }
 .portfolio-item .details :is(p, .tag) {
@@ -602,6 +603,14 @@ nav ul {
 }
 .portfolio-item .details .tag {
   font-weight: 400;
+}
+.portfolio-item .details .description a {
+  color: var(--accentColor);
+  text-decoration: none;
+}
+.portfolio-item .details .description a:hover {
+  color: var(--accentColorGlow);
+  text-decoration: underline;
 }
 .portfolio-item .type {
   display: block;
