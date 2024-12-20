@@ -306,6 +306,7 @@ nav ul {
   letter-spacing: 0.15em; /* Adjust as needed */
   width: 0%;
   max-width: max-content !important;
+  text-shadow: 0 0 5px var(--accentColor);
 }
 #home .text-wrapper .typewriter:nth-child(1) {
   animation: typing 2.5s 2s steps(40, end) forwards, blink-caret 1s step-end 4;
@@ -347,6 +348,7 @@ nav ul {
 }
 #home h2 span {
   color: var(--tertiaryColor);
+  text-shadow: 0 0 5px var(--tertiaryColor);
 }
 #home .text-wrapper {
   display: flex;
