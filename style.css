@@ -14,6 +14,7 @@
 html::-webkit-scrollbar {
   background: rgb(0, 42, 76);
   width: 0.5em;
+  scroll-behavior: smooth;
 }
 
 /* Handle */
@@ -83,6 +84,9 @@ header img {
   filter: invert(75%) sepia(53%) saturate(5872%) hue-rotate(135deg)
     brightness(97%) contrast(101%);
 }
+main {
+  overflow-y: hidden;
+}
 
 nav ul li {
   text-align: center;
@@ -108,12 +112,18 @@ a:not(#resume-link, .card).active,
 }
 section {
   padding: 1rem 2rem;
+  scroll-snap-type: y mandatory;
 }
 section:not(#home) {
   max-width: 1200px;
   margin: auto;
   padding-top: 5rem;
   padding-bottom: 5rem;
+  background-color: var(--primaryColor);
+  min-height: 100vh;
+  display: flex;
+  place-content: center;
+  place-items: center;
 }
 footer {
   text-align: center;
@@ -235,12 +245,23 @@ nav ul {
 .section-content {
   display: grid;
   column-gap: 2rem;
+  width: 100%;
 }
 .section-content > h2 {
   grid-row: 1;
   grid-column: 1/-1;
   margin: 0;
   align-content: end;
+}
+.fade-in-section {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  visibility: visible;
 }
 .card {
   background-color: rgba(0, 116, 189, 0.1);
@@ -497,6 +518,9 @@ nav ul {
 .top-3-wrapper {
   display: grid;
   gap: 2rem;
+}
+.portfolio #bodybuddy {
+  scroll-margin-top: 100px;
 }
 .top-3-wrapper {
   padding-bottom: 2rem;
@@ -782,6 +806,24 @@ nav ul {
 .experience-item h4 {
   color: var(--secondaryColor);
 }
+.experience-perk {
+  color: #a0800d !important;
+  align-items: center;
+  align-content: center;
+  font-weight: 400;
+  text-transform: capitalize !important;
+  font-size: 1rem;
+  position: relative;
+  top: -0.4rem;
+}
+.experience-perk i {
+  font-size: 0.9rem;
+}
+.experience-perk span {
+  font-size: 1.3rem;
+  position: relative;
+  top: 0.1rem;
+}
 .experience-grid > .wrapper,
 .experience-item p {
   font-weight: 200;
@@ -803,7 +845,8 @@ nav ul {
 }
 /*Contact*/
 #contact {
-  min-height: 50vh;
+  min-height: 50vh !important;
+  padding-top: 0 !important;
 }
 #contact .section-content {
   position: relative;
@@ -1158,9 +1201,13 @@ nav ul {
   .experience-grid .experience-details.show p {
     opacity: 1;
     height: 100%;
-    max-height: 180px;
+    max-height: 140px;
     padding: initial;
     padding-bottom: 1rem;
+  }
+  .experience-grid .experience-details p a {
+    color: var(--accentColor);
+    text-decoration: none;
   }
   .experience-grid .experience-details p::-webkit-scrollbar {
     background: rgb(0, 42, 76);

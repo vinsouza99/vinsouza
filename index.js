@@ -33,6 +33,26 @@ document.addEventListener("DOMContentLoaded", (e) => {
   }
   skipBtn.addEventListener("click", finishAnimation);
   currentYearSpan.innerText = new Date().getFullYear();
+
+  // Initialize the intersection observer for all fade-in sections
+  function initFadeInSections() {
+    const sections = document.querySelectorAll(".fade-in-section");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        } else {
+          entry.target.classList.remove("is-visible");
+        }
+      });
+    });
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+  }
+
   function finishAnimation() {
     header.style.opacity = "1";
     document.getElementsByTagName("html")[0].style.overflowY = "scroll";
@@ -79,7 +99,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
       localTime.innerText = `${dateTime.toDateString()}  ${dateTime.toLocaleTimeString()}`;
       setInterval(async () => {
         dateTime.setMilliseconds(1001);
-        localTime.innerText = `${dateTime.toDateString()}  ${dateTime.toLocaleTimeString()}`;
+        localTime.innerText = `Local time: ${dateTime.toDateString()}  ${dateTime.toLocaleTimeString()}`;
       }, 1000);
     })
     .catch((e) => {
@@ -92,4 +112,5 @@ document.addEventListener("DOMContentLoaded", (e) => {
       header.classList.remove("opaque");
     }
   });
+  initFadeInSections();
 });
