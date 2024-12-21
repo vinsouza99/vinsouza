@@ -18,6 +18,22 @@ document.addEventListener("DOMContentLoaded", (e) => {
   const skillItems = Array.from(document.getElementsByClassName("skill-item"));
   const skillFilters = document.querySelectorAll("#skills .button-tag input");
   const experienceDetails = document.querySelectorAll(".experience-details");
+  const showMoreButtons = document.querySelectorAll(".show-more button");
+
+  showMoreButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const target =
+        e.target.parentElement.parentElement.querySelector(".description");
+
+      if (target.classList.contains("show")) {
+        target.classList.remove("show");
+        e.target.innerText = "Show more";
+      } else {
+        target.classList.add("show");
+        e.target.innerText = "Show less";
+      }
+    });
+  });
 
   menuItems.forEach((item) => {
     item.addEventListener("click", () => {
@@ -34,6 +50,26 @@ document.addEventListener("DOMContentLoaded", (e) => {
   skipBtn.addEventListener("click", finishAnimation);
   currentYearSpan.innerText = new Date().getFullYear();
 
+  window.onscroll = () => {
+    var currentSection = "";
+    const sections = document.querySelectorAll("section");
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      if (scrollY >= sectionTop - 50) {
+        currentSection = section.getAttribute("id");
+      }
+    });
+
+    menuItems.forEach((a) => {
+      a.classList.remove("active");
+      if (a.getAttribute("id")) {
+        if (a.getAttribute("id").split("-")[0] == currentSection) {
+          a.classList.add("active");
+        }
+      }
+    });
+  };
   // Initialize the intersection observer for all fade-in sections
   function initFadeInSections() {
     const sections = document.querySelectorAll(".fade-in-section");

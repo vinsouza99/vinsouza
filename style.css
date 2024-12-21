@@ -467,7 +467,7 @@ nav ul {
 }
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   background-color: rgba(0, 116, 189, 0.08);
   row-gap: 0.5rem;
   padding: 0.5rem;
@@ -529,6 +529,30 @@ nav ul {
 }
 .portfolio-item.top3 h3 {
   font-size: 2rem;
+}
+.portfolio-item.top3 .description {
+  transition: all 0.5s ease-in-out;
+  max-height: 100px;
+  height: 100%;
+  overflow: hidden;
+}
+.portfolio-item.top3 .show-more {
+  display: flex;
+  justify-content: end;
+}
+.portfolio-item.top3 .show-more button {
+  background-color: transparent;
+  padding: 1rem 0;
+  position: relative;
+  top: -0.3rem;
+  border: none;
+  color: var(--accentColor);
+  text-transform: capitalize;
+  font-size: 0.8rem;
+}
+.portfolio-item.top3 .description.show {
+  max-height: unset;
+  overflow: hidden;
 }
 .portfolio .sub-section-title {
   margin: 2rem 0;
@@ -620,7 +644,7 @@ nav ul {
   font-size: 0.875rem;
   opacity: 0;
 }
-.portfolio-item .details p {
+.portfolio-item .details .description {
   display: flex;
   flex: 1;
   line-height: 1.15;
@@ -666,7 +690,7 @@ nav ul {
   display: block;
   color: var(--secondaryColor);
   border: thin solid var(--secondaryColor);
-  padding: 0.2rem 0.875rem;
+  padding: 0.2rem 0.4rem;
   border-radius: 5px;
   font-weight: 400;
   transition: all 0.2s ease-in-out;
@@ -854,7 +878,7 @@ nav ul {
 }
 /*Contact*/
 #contact {
-  min-height: 50vh !important;
+  min-height: 100vh !important;
   padding-top: 0 !important;
 }
 #contact .section-content {
@@ -1011,7 +1035,9 @@ nav ul {
   section .section-content {
     grid-template-columns: repeat(2, 1fr);
   }
-
+  :is(.tag, .button-tag) {
+    padding: 0.2rem 0.875rem;
+  }
   /*About*/
   #about .section-content {
     grid-template-columns: repeat(2, 1fr);
@@ -1078,7 +1104,14 @@ nav ul {
   #portfolio .portfolio-item.top3 {
     padding: 0.4rem 0.875rem;
   }
-
+  #portfolio .portfolio-item.top3 .show-more {
+    display: none;
+  }
+  .portfolio-item.top3 .description {
+    max-height: unset;
+    height: 100%;
+    overflow: hidden;
+  }
   #skills .grid-item:nth-of-type(2) {
     grid-column: 2;
     grid-row: 1/3;
