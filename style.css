@@ -569,7 +569,7 @@ nav ul {
   display: flex;
 }
 
-@container portfolio-item (max-width:400px) {
+@container portfolio-item (max-width:500px) {
   .portfolio-item {
     flex-direction: column;
     flex-wrap: wrap;
@@ -621,6 +621,8 @@ nav ul {
   opacity: 0;
 }
 .portfolio-item .details p {
+  display: flex;
+  flex: 1;
   line-height: 1.15;
 }
 .portfolio-item .details :is(p, .tag) {
@@ -800,6 +802,10 @@ nav ul {
   padding-bottom: 1rem;
   transition: all 0.4s ease-in-out;
 }
+.experience-grid .experience-details p a {
+  color: var(--accentColor);
+  text-decoration: none;
+}
 .experience-item :is(h3, h4) {
   margin: 0;
   letter-spacing: 1px;
@@ -844,6 +850,7 @@ nav ul {
   width: min-content;
   text-wrap: nowrap;
   overflow: visible;
+  font-size: 1.5rem;
 }
 /*Contact*/
 #contact {
@@ -904,7 +911,8 @@ nav ul {
 #contact form .form-group button {
   align-self: end;
 }
-@media screen and (min-width: 400px) {
+
+@media screen and (min-width: 600px) {
   .experience-item {
     flex-direction: row;
   }
@@ -912,8 +920,9 @@ nav ul {
     position: static;
     max-width: unset;
   }
-}
-@media screen and (min-width: 600px) {
+  .experience-item .year {
+    font-size: 1.2rem;
+  }
   #portfolio .portfolio-grid {
     grid-auto-flow: row;
     overflow: visible;
@@ -1171,10 +1180,10 @@ nav ul {
     position: relative;
     height: 1px;
     font-size: 1rem;
-    max-width: 250px;
     overflow-y: scroll;
     transition: all 0.4s ease-in-out;
     padding: 0;
+    padding-right: 0.2rem;
     opacity: 0;
   }
   .experience-grid .experience-details .experience-name {
@@ -1206,10 +1215,6 @@ nav ul {
     max-height: 140px;
     padding: initial;
     padding-bottom: 1rem;
-  }
-  .experience-grid .experience-details p a {
-    color: var(--accentColor);
-    text-decoration: none;
   }
   .experience-grid .experience-details p::-webkit-scrollbar {
     background: rgb(0, 42, 76);
@@ -1267,7 +1272,7 @@ nav ul {
     grid-column: 1 / span 5;
   }
   .experience-grid .item-2 {
-    grid-column: 3 / span 5;
+    grid-column: 3 / span 6;
   }
   .experience-grid .item-3 {
     grid-column: 6 / span 5;
@@ -1313,6 +1318,10 @@ nav ul {
   .experience-grid .item-4 {
     grid-column: 8 / span 4;
   }
+  .experience-grid .item-4 .experience-details.show {
+    padding-bottom: 0rem;
+  }
+
   .experience-grid > .wrapper {
     text-align: justify;
     padding-right: 0.5rem;
