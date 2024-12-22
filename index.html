@@ -19,13 +19,15 @@
     <link rel="stylesheet" href="./style.css" />
     <script src="./index.js"></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <title>Vin Souza</title>
+    <title>Vin Souza | Web Developer</title>
   </head>
   <body>
     <header>
       <div class="logo-wrapper">
-        <h1 class="visually-hidden">Vin Souza</h1>
-        <img src="./assets/logo.svg" alt="Logo" />
+        <a href="#home">
+          <h1 class="visually-hidden">Vin Souza</h1>
+          <img src="./assets/logo.svg" alt="Logo" />
+        </a>
       </div>
       <div class="toggle-menu-wrapper">
         <button type="button" id="toggle-menu-btn">
@@ -146,6 +148,17 @@
           <div class="grid-item skillset">
             <div class="wrapper">
               <form action="#" class="tags">
+                <label for="allFilter" class="button-tag">
+                  All
+                  <input
+                    type="radio"
+                    id="allFilter"
+                    value="all"
+                    hidden
+                    name="filter"
+                    checked
+                  />
+                </label>
                 <label for="languageFilter" class="button-tag">
                   Languages
                   <input
@@ -154,7 +167,6 @@
                     value="language"
                     hidden
                     name="filter"
-                    checked
                   />
                 </label>
                 <label for="frontendFilter" class="button-tag">
@@ -236,37 +248,37 @@
                     </div>
                     <span>C#</span>
                   </button>
-                  <button class="skill-item" tags="frontend">
+                  <button class="skill-item active" tags="frontend">
                     <div class="img-wrapper">
                       <img src="./assets/images/angular.svg" alt="Angular" />
                     </div>
                     <span>Angular</span>
                   </button>
-                  <button class="skill-item" tags="frontend">
+                  <button class="skill-item active" tags="frontend">
                     <div class="img-wrapper">
                       <img src="./assets/images/react.svg" alt="React" />
                     </div>
                     <span>React</span>
                   </button>
-                  <button class="skill-item" tags="backend">
+                  <button class="skill-item active" tags="backend">
                     <div class="img-wrapper">
                       <img src="./assets/images/node.svg" alt="Node JS" />
                     </div>
                     <span>Node JS</span>
                   </button>
-                  <button class="skill-item" tags="backend">
+                  <button class="skill-item active" tags="backend">
                     <div class="img-wrapper">
                       <img src="./assets/images/dotnet.svg" alt="Dot Net" />
                     </div>
                     <span>.NET</span>
                   </button>
-                  <button class="skill-item" tags="backend">
+                  <button class="skill-item active" tags="backend">
                     <div class="img-wrapper">
                       <img src="./assets/images/firebase.svg" alt="Firebase" />
                     </div>
                     <span>Firebase</span>
                   </button>
-                  <button class="skill-item" tags="backend">
+                  <button class="skill-item active" tags="backend">
                     <div class="img-wrapper">
                       <img
                         src="./assets/images/springboot.png"
@@ -275,31 +287,31 @@
                     </div>
                     <span>Springboot</span>
                   </button>
-                  <button class="skill-item" tags="backend">
+                  <button class="skill-item active" tags="backend">
                     <div class="img-wrapper">
                       <img src="./assets/images/express.svg" alt="Express" />
                     </div>
                     <span>Express</span>
                   </button>
-                  <button class="skill-item" tags="backend">
+                  <button class="skill-item active" tags="backend">
                     <div class="img-wrapper">
                       <img src="./assets/images/sql.svg" alt="SQL" />
                     </div>
                     <span>SQL</span>
                   </button>
-                  <button class="skill-item" tags="backend">
+                  <button class="skill-item active" tags="backend">
                     <div class="img-wrapper">
                       <img src="./assets/images/nosql.svg" alt="No SQL" />
                     </div>
                     <span>NoSQL</span>
                   </button>
-                  <button class="skill-item" tags="design">
+                  <button class="skill-item active" tags="design">
                     <div class="img-wrapper">
                       <img src="./assets/images/figma.svg" alt="Figma" />
                     </div>
                     <span>Figma</span>
                   </button>
-                  <button class="skill-item" tags="design">
+                  <button class="skill-item active" tags="design">
                     <div class="img-wrapper">
                       <img
                         src="./assets/images/illustrator.svg"
@@ -308,7 +320,7 @@
                     </div>
                     <span>Illustrator</span>
                   </button>
-                  <button class="skill-item" tags="other">
+                  <button class="skill-item active" tags="other">
                     <div class="img-wrapper">
                       <img
                         src="./assets/images/wordpress.svg"

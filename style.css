@@ -78,11 +78,19 @@ header {
   opacity: 0;
 }
 header.opaque {
-  background-color: var(--primaryColor);
+  background-color: rgba(0, 30, 54, 0.9);
+  backdrop-filter: blur(10px);
 }
 header img {
   filter: invert(75%) sepia(53%) saturate(5872%) hue-rotate(135deg)
-    brightness(97%) contrast(101%);
+    brightness(97%) contrast(101%)
+    drop-shadow(0px 0px 0px rgba(0, 198, 185, 0.4));
+  transition: all 0.5s ease-in-out;
+}
+header img.active {
+  filter: invert(75%) sepia(53%) saturate(5872%) hue-rotate(135deg)
+    brightness(97%) contrast(101%)
+    drop-shadow(0px 0px 8px rgba(0, 198, 185, 0.4));
 }
 main {
   overflow-y: hidden;
@@ -478,7 +486,7 @@ nav ul {
 .skills-grid .skill-item {
   background-color: transparent;
   border: none;
-  color: var(--accentColor);
+  color: var(--lighterSecondaryColor);
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -680,6 +688,11 @@ nav ul {
   object-fit: cover;
   border-radius: 5px;
   mix-blend-mode: screen;
+}
+@media (pointer: none), (pointer: coarse) {
+  .portfolio-item .thumbnail-wrapper img {
+    mix-blend-mode: normal;
+  }
 }
 .tags {
   display: flex;

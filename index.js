@@ -73,7 +73,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
   // Initialize the intersection observer for all fade-in sections
   function initFadeInSections() {
     const sections = document.querySelectorAll(".fade-in-section");
-
+    const heroSection = document.querySelector("#home");
+    const logo = document.querySelector("header img");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -83,6 +84,16 @@ document.addEventListener("DOMContentLoaded", (e) => {
         }
       });
     });
+    const heroSectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          logo.classList.add("active");
+        } else {
+          logo.classList.remove("active");
+        }
+      });
+    });
+    heroSectionObserver.observe(heroSection);
 
     sections.forEach((section) => {
       observer.observe(section);
@@ -116,10 +127,15 @@ document.addEventListener("DOMContentLoaded", (e) => {
   skillFilters.forEach((filter) => {
     filter.addEventListener("change", () => {
       let chosenFilter = filter.value;
+
       skillItems.forEach((item) => {
-        item.classList.remove("active");
-        if (item.getAttribute("tags").split(",").includes(chosenFilter)) {
-          item.classList.add("active");
+        if (chosenFilter == "all") {
+          if (!item.classList.contains("active")) item.classList.add("active");
+        } else {
+          item.classList.remove("active");
+          if (item.getAttribute("tags").split(",").includes(chosenFilter)) {
+            item.classList.add("active");
+          }
         }
       });
     });
