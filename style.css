@@ -234,10 +234,11 @@ nav ul {
 }
 .main-menu ul li:nth-last-child(1) {
   align-self: center;
-  min-width: 40vw;
 }
 .menu-wrapper {
-  transition: all 0.5s ease-in-out;
+  transition-property: width, right;
+  transition-duration: 0.5s, 0.5s;
+  transition-timing-function: ease-in-out, ease-in-out;
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
@@ -1286,7 +1287,6 @@ nav ul {
     overflow-y: scroll;
     transition: all 0.4s ease-in-out;
     padding: 0;
-    padding-right: 0.2rem;
     opacity: 0;
   }
   .experience-grid .experience-details .experience-name {
@@ -1314,10 +1314,10 @@ nav ul {
   }
   .experience-grid .experience-details.show p {
     opacity: 1;
-    height: 100%;
-    max-height: 140px;
+    height: 140px;
     padding: initial;
     padding-bottom: 1rem;
+    padding-right: 0.5rem;
   }
   .experience-grid .experience-details p::-webkit-scrollbar {
     background: rgb(0, 42, 76);
@@ -1430,7 +1430,6 @@ nav ul {
   }
 
   .experience-grid > .wrapper {
-    text-align: justify;
     padding-right: 0.5rem;
     grid-column: 1 / span 3;
     grid-row: 1;
