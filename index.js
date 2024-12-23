@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
       });
     });
   });
-  fetch("http://worldtimeapi.org/api/timezone/America/Vancouver")
+  fetch("https://worldtimeapi.org/api/timezone/America/Vancouver")
     .then((data) => {
       return data.json();
     })
