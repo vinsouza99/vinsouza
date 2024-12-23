@@ -40,6 +40,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
       item.classList.toggle("active");
       activeMenuItem.classList.toggle("active");
       activeMenuItem = item;
+      if (menu.classList.contains("show")) {
+        toggleMenu();
+      }
     });
   });
   if (window.scrollY == 0) {
@@ -108,15 +111,15 @@ document.addEventListener("DOMContentLoaded", (e) => {
     otherInfo.style.opacity = "1";
     socialLinks.style.opacity = "1";
   }
-
-  menuToggleBtn.addEventListener("click", (e) => {
+  function toggleMenu() {
     menu.classList.toggle("show");
     menuToggleBtnText.innerText = menu.classList.contains("show")
       ? "Open Menu"
       : "Close menu";
     menuToggleBtnIcon.classList.toggle("fa-bars");
     menuToggleBtnIcon.classList.toggle("fa-xmark");
-  });
+  }
+  menuToggleBtn.addEventListener("click", (e) => toggleMenu());
 
   experienceDetails.forEach((details) => {
     details.addEventListener("click", (e) => {

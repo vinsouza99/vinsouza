@@ -73,13 +73,19 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--primaryColor);
+  background-color: rgba(0, 30, 54, 0.9);
   transition: all 0.4s ease-in-out;
   opacity: 0;
+  isolation: isolate; /* Add this to create a new stacking context */
 }
 header.opaque {
   background-color: rgba(0, 30, 54, 0.9);
   backdrop-filter: blur(10px);
+  transition: all 0.5s ease-in-out;
+}
+header.opaque:has(.menu-wrapper.show) {
+  backdrop-filter: unset;
+  -webkit-backdrop-filter: unset;
 }
 header img {
   filter: invert(75%) sepia(53%) saturate(5872%) hue-rotate(135deg)
@@ -242,6 +248,15 @@ nav ul {
   right: -100%;
   bottom: 0;
   background-color: rgb(0, 20, 36);
+  /* Add these properties */
+  isolation: isolate;
+  transform: translateZ(0); /* Forces a new stacking context */
+  /* Add these properties */
+  height: 100vh; /* Force full viewport height */
+
+  will-change: transform; /* Helps with performance and may fix rendering */
+  contain: layout paint; /* Isolates rendering */
+  overflow-y: auto; /* In case content is taller than viewport */
 }
 .menu-wrapper.show {
   right: 0 !important;
@@ -732,11 +747,12 @@ nav ul {
 #portfolio .view-more {
   display: flex;
   justify-content: center;
-  padding-top: 1.5rem;
 }
 #portfolio .view-more a {
   display: block;
   width: 100%;
+  min-width: 55vw;
+  min-height: 10vh;
   text-align: center;
   font-size: 1.2rem;
   color: var(--accentColor);
@@ -752,6 +768,23 @@ nav ul {
 }
 #portfolio .view-more:hover a i:last-child {
   opacity: 1;
+}
+#portfolio #otherProjects {
+  overflow: visible;
+}
+#portfolio #otherProjects .portfolio-grid {
+  width: 100vw;
+  position: relative;
+  left: -2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for Firefox */
+  scrollbar-width: none;
+  /* Hide scrollbar for IE and Edge */
+  -ms-overflow-style: none;
 }
 /*Experience grid*/
 #experience h2 {
@@ -900,17 +933,29 @@ nav ul {
 #contact .social-links ul {
   display: flex;
   flex-flow: row wrap;
-  justify-content: left;
-  align-content: flex-start;
+  justify-content: center;
+  align-content: center;
   margin: 2rem 0;
+  gap: 2rem;
 }
 #contact .social-links ul li {
-  flex-basis: 100%;
   display: flex;
+  flex: 1;
+  flex-basis: 35%;
+  flex-direction: column;
+  min-inline-size: max-content;
 }
 #contact .social-links ul li a {
   text-transform: none;
-  font-size: 1.1rem;
+  font-size: 3rem;
+}
+#contact .social-links ul li:not(:nth-last-child(1)) a {
+  font-size: 3rem;
+}
+/*#contact .social-links ul li:not(:nth-last-child(1)) a span.contact-slug {*/
+#contact .social-links ul li a span.contact-slug {
+  /*display: none;*/
+  font-size: 1rem;
 }
 #contact .section-content .grid-item:nth-child(3) {
   display: none;
@@ -947,6 +992,9 @@ nav ul {
 }
 #contact form .form-group button {
   align-self: end;
+}
+#contact .social-links nav ul li a {
+  flex-direction: column;
 }
 
 @media screen and (min-width: 600px) {
@@ -1035,6 +1083,7 @@ nav ul {
     background-color: transparent;
     max-width: unset;
     padding-top: 0.5rem;
+    height: auto;
   }
   .main-menu ul,
   .contact-menu ul {
@@ -1095,6 +1144,7 @@ nav ul {
     height: 100px;
     background: linear-gradient(rgba(0, 30, 54, 0), rgba(0, 30, 54, 1));
   }
+
   .portfolio-item-container {
     display: flex;
   }
@@ -1107,7 +1157,11 @@ nav ul {
     padding: 0 0.1rem;
     position: relative;
   }
-
+  #portfolio #otherProjects .portfolio-grid {
+    width: 100%;
+    left: unset;
+    padding-left: unset;
+  }
   #portfolio
     .top-3-wrapper
     .portfolio-item-container:nth-child(2)
@@ -1119,6 +1173,9 @@ nav ul {
   }
   #portfolio .portfolio-item.top3 .show-more {
     display: none;
+  }
+  #portfolio .view-more a {
+    min-width: min-content;
   }
   .portfolio-item.top3 .description {
     max-height: unset;
@@ -1342,6 +1399,10 @@ nav ul {
   }
   #contact .section-content .social-links ul i {
     font-size: 3rem;
+  }
+  #contact .social-links nav ul li a {
+    flex: 1;
+    flex-direction: row;
   }
 }
 @media screen and (min-width: 1000px) {
