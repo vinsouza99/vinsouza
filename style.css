@@ -10,6 +10,16 @@
   --accentColor: rgba(0, 198, 185, 1);
   --accentColorGlow: rgba(0, 198, 185, 0.5);
 }
+::selection {
+  background: var(--secondaryColor); /* Light greenish-blue background */
+  color: var(--tertiaryColor); /* Dark blue text */
+}
+
+/* For WebKit-based browsers (Chrome, Safari) */
+::-moz-selection {
+  background: var(--secondaryColor); /* Light greenish-blue background */
+  color: var(--tertiaryColor); /* Dark blue text */
+}
 /* Track */
 html::-webkit-scrollbar {
   background: rgb(0, 42, 76);
@@ -88,9 +98,8 @@ header.opaque:has(.menu-wrapper.show) {
   -webkit-backdrop-filter: unset;
 }
 header img {
-  filter: invert(75%) sepia(53%) saturate(5872%) hue-rotate(135deg)
-    brightness(97%) contrast(101%)
-    drop-shadow(0px 0px 0px rgba(0, 198, 185, 0.4));
+  filter: invert(38%) sepia(67%) saturate(6764%) hue-rotate(187deg)
+    brightness(75%) contrast(102%);
   transition: all 0.5s ease-in-out;
 }
 header img.active {
@@ -104,7 +113,7 @@ main {
 
 nav ul li {
   text-align: center;
-  align-content: center;
+  align-content: end;
 }
 nav ul li:not(:last-of-type):hover,
 nav ul li:not(:last-of-type) :has(a:active) {
@@ -134,16 +143,18 @@ section:not(#home) {
   padding-top: 5rem;
   padding-bottom: 5rem;
   background-color: var(--primaryColor);
-  min-height: 100vh;
   display: flex;
   place-content: center;
   place-items: center;
 }
 footer {
+  display: flex;
+  justify-content: center;
   text-align: center;
   align-items: center;
   width: 100%;
   min-height: 10vh;
+  background-color: rgb(0 23 42);
   color: var(--secondaryColor) !important;
 }
 #resume-link,
@@ -159,6 +170,9 @@ footer {
   border: 2px solid;
   transition: all 0.2s ease-in-out;
   color: var(--accentColor);
+}
+#resume-link {
+  margin-bottom: 1rem;
 }
 :is(#resume-link, #contact form .form-group button):hover {
   color: var(--tertiaryColor);
@@ -176,7 +190,7 @@ header nav ul li a {
   font-weight: 600;
   transition: all 0.2s ease-in-out;
   border-bottom: 5px solid transparent;
-  padding: 0.5rem;
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
 }
 header nav ul li :is(a:hover, a.active) {
   color: var(--accentColor);
@@ -386,7 +400,9 @@ nav ul {
   transition: all 0.4s ease-in-out;
 }
 #home .social-links {
-  margin: 2rem 0;
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: end;
 }
 #home .social-links ul {
   gap: 2rem;
@@ -400,20 +416,24 @@ nav ul {
 }
 #home .social-links i {
   color: var(--secondaryColor);
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 #home .social-links nav ul li a:hover i {
   text-shadow: 0 0 2px var(--accentColor);
   color: var(--accentColor);
   text-decoration: none !important;
 }
-#home .other-info {
-  display: flex;
-  justify-content: space-between;
+#home .secondary-info {
   position: absolute;
   bottom: 10vh;
   left: 10vw;
   right: 2rem;
+}
+#home .other-info {
+  display: flex;
+  text-align: right;
+  justify-content: end;
+
   font-size: 2rem;
 }
 #home .other-info div:first-of-type {
@@ -873,6 +893,10 @@ nav ul {
   padding-bottom: 1rem;
   transition: all 0.4s ease-in-out;
 }
+.experience-grid .experience-details p {
+  padding-right: 0.5rem;
+  font-size: 0.9rem;
+}
 .experience-grid .experience-details p a {
   color: var(--accentColor);
   text-decoration: none;
@@ -925,7 +949,7 @@ nav ul {
 }
 /*Contact*/
 #contact {
-  min-height: 100vh !important;
+  min-height: 85vh !important;
   padding-top: 0 !important;
 }
 #contact .section-content {
@@ -953,10 +977,8 @@ nav ul {
 #contact .social-links ul li:not(:nth-last-child(1)) a {
   font-size: 3rem;
 }
-/*#contact .social-links ul li:not(:nth-last-child(1)) a span.contact-slug {*/
 #contact .social-links ul li a span.contact-slug {
-  /*display: none;*/
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 #contact .section-content .grid-item:nth-child(3) {
   display: none;
@@ -1070,6 +1092,7 @@ nav ul {
     flex-flow: row nowrap;
     justify-content: space-between;
     background-color: transparent;
+    padding: 1rem 2rem 0 2rem;
   }
   nav ul li a {
     font-size: clamp(12px, 1.5vw, 1rem);
@@ -1162,6 +1185,7 @@ nav ul {
     width: 100%;
     left: unset;
     padding-left: unset;
+    padding-right: unset;
   }
   #portfolio
     .top-3-wrapper
@@ -1279,15 +1303,43 @@ nav ul {
   .experience-grid .experience-details:hover {
     cursor: pointer;
   }
-  .experience-grid .experience-details p {
+
+  .experience-grid .experience-details .experience-description {
     display: block;
     position: relative;
-    height: 1px;
+    height: 50px;
     font-size: 1rem;
-    overflow-y: scroll;
-    transition: all 0.4s ease-in-out;
+    overflow-y: hidden;
+    transition: height 0.3s ease;
     padding: 0;
-    opacity: 0;
+    padding-bottom: 25px;
+    opacity: 1;
+  }
+  .experience-grid .experience-details .experience-description::after {
+    /*
+    display: block;
+    width: 100%;
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -1px;
+    height: 25px;
+    */
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Control how much of the div fades */
+    pointer-events: none;
+    background: linear-gradient(to top, rgba(0, 30, 54, 1), rgba(0, 30, 54, 0));
+  }
+  .experience-grid .experience-details .experience-description p {
+    display: block;
+    height: 100%;
+    overflow-y: hidden;
+    padding-bottom: 50px;
   }
   .experience-grid .experience-details .experience-name {
     position: relative;
@@ -1312,19 +1364,28 @@ nav ul {
     opacity: 0;
     transition: all 0.2s ease-in-out;
   }
-  .experience-grid .experience-details.show p {
+  .experience-grid .experience-details.show .experience-description {
     opacity: 1;
     height: 140px;
     padding: initial;
     padding-bottom: 1rem;
     padding-right: 0.5rem;
   }
-  .experience-grid .experience-details p::-webkit-scrollbar {
+  .experience-grid .experience-details.show .experience-description p {
+    overflow-y: auto;
+  }
+  .experience-grid
+    .experience-details
+    .experience-description
+    p::-webkit-scrollbar {
     background: rgb(0, 42, 76);
     width: 3px;
     border-radius: 10px;
   }
-  .experience-grid .experience-details p::-webkit-scrollbar-thumb {
+  .experience-grid
+    .experience-details
+    .experience-description
+    p::-webkit-scrollbar-thumb {
     background: var(--accentColor);
   }
   .experience-grid .experience-details.show .tags {
@@ -1389,7 +1450,8 @@ nav ul {
   }
   #contact .section-content .social-links {
     margin: auto;
-    width: 50%;
+    max-width: 65%;
+    padding-top: 5rem;
   }
   #contact .section-content .social-links ul {
     gap: 2rem;
