@@ -238,7 +238,6 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 0.5rem;
   height: 100%;
   align-content: center;
 }
@@ -525,7 +524,7 @@ nav ul {
 .skills-grid .skill-item {
   background-color: transparent;
   border: none;
-  color: var(--lighterSecondaryColor);
+  color: var(--accentColor);
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -648,13 +647,16 @@ nav ul {
     padding: 0;
     height: fit-content;
   }
-  .portfolio-item .thumbnail-wrapper {
+  .portfolio-item:not(.top3) .thumbnail-wrapper {
     min-height: 200px;
   }
 }
 @container portfolio-item (min-width:500px) {
   .portfolio-item .thumbnail-wrapper {
     aspect-ratio: 4/3;
+  }
+  .portfolio-item .details {
+    flex-grow: 1;
   }
 }
 .portfolio-item {
@@ -675,7 +677,7 @@ nav ul {
 .portfolio-item .details {
   display: flex;
   flex-flow: column nowrap;
-  flex-grow: 2;
+  flex-grow: 1;
   padding: 1rem 1rem;
 }
 .portfolio-item .details .title {
@@ -1524,5 +1526,8 @@ nav ul {
 @media screen and (min-width: 1200px) {
   section {
     padding: 1rem 0;
+  }
+  .portfolio-item .details {
+    flex-grow: 2;
   }
 }
