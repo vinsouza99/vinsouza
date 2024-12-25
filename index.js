@@ -80,10 +80,11 @@ document.addEventListener("DOMContentLoaded", (e) => {
     const logo = document.querySelector("header img");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        if (
+          !entry.target.classList.contains("is-visible") &&
+          entry.isIntersecting
+        ) {
           entry.target.classList.add("is-visible");
-        } else {
-          entry.target.classList.remove("is-visible");
         }
       });
     });
