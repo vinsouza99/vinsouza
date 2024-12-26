@@ -65,7 +65,9 @@ html {
 h1,
 h2,
 h3 {
-  font-family: "Inconsolata";
+  font-family: "Inconsolata", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
   color: var(--accentColor);
 }
 h2 {
@@ -125,7 +127,7 @@ nav ul li a,
 .view-more a {
   text-decoration: none;
   align-content: center;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 1rem;
   letter-spacing: 1px;
 }
@@ -175,7 +177,9 @@ footer {
   color: var(--accentColor);
 }
 #resume-link {
-  margin-bottom: 1rem;
+  border-top-color: rgb(0, 163, 153) !important;
+  max-width: 50%;
+  margin: 0 auto 1rem auto;
 }
 :is(#resume-link, #contact form .form-group button):hover {
   color: var(--tertiaryColor);
@@ -192,8 +196,9 @@ header nav ul li a {
   color: var(--lighterSecondaryColor);
   font-weight: 600;
   transition: all 0.2s ease-in-out;
-  border-bottom: 5px solid transparent;
-  padding: 0.5rem 0.5rem 1rem 0.5rem;
+  border-top: 1px solid rgba(0, 116, 189, 0.3);
+  border-bottom: 5px solid rgba(0, 163, 153, 0);
+  padding: 1rem;
 }
 header nav ul li :is(a:hover, a.active) {
   color: var(--accentColor);
@@ -246,10 +251,13 @@ nav ul {
 }
 .main-menu ul {
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: start;
 }
 .main-menu ul li:nth-last-child(1) {
   align-self: center;
+  width: 100%;
+  border-top: 1px solid rgba(0, 116, 189, 0.3);
+  padding-top: 1rem;
 }
 .menu-wrapper {
   transition-property: width, right;
@@ -561,6 +569,8 @@ nav ul {
 }
 #portfolio .view-more {
   min-width: max-content;
+  background-color: rgba(0, 72, 116, 0.1);
+  border-color: rgba(0, 92, 150, 0.2);
 }
 .portfolio,
 .top-3-wrapper {
@@ -603,8 +613,10 @@ nav ul {
 .portfolio .sub-section-title {
   margin: 2rem 0;
   text-align: center;
+  font-size: 1.6rem;
   display: block;
   width: 100%;
+  text-transform: capitalize;
 }
 #portfolio .grid-wrapper::-webkit-scrollbar {
   display: none;
@@ -781,16 +793,26 @@ nav ul {
   min-height: 10vh;
   text-align: center;
   font-size: 1.2rem;
-  color: var(--accentColor);
+  color: var(--lighterSecondaryColor);
   letter-spacing: 1px;
+}
+#portfolio .view-more :is(a, i) {
+  transition: color 0.4s ease-in-out;
 }
 #portfolio .view-more a i:first-child {
   font-size: 1.4rem;
-  color: var(--accentColor);
+  color: var(--lighterSecondaryColor);
 }
 #portfolio .view-more a i:last-child {
   font-size: 1rem;
   opacity: 0;
+}
+#portfolio .view-more:hover {
+  background-color: rgba(0, 116, 189, 0.1);
+  border: thin solid rgba(0, 116, 189, 0.2);
+}
+#portfolio .view-more:hover :is(a, i) {
+  color: var(--accentColor) !important;
 }
 #portfolio .view-more:hover a i:last-child {
   opacity: 1;
@@ -1100,7 +1122,15 @@ nav ul {
     padding: 1rem 2rem 0 2rem;
   }
   nav ul li a {
-    font-size: clamp(12px, 1.5vw, 1rem);
+    border-top-color: rgba(0, 116, 189, 0) !important;
+  }
+  nav ul li a {
+    font-size: clamp(16px, 1.5vw, 1.2rem);
+  }
+  #resume-link {
+    border-top-color: rgb(0, 163, 153) !important;
+    margin: unset;
+    margin-bottom: 1rem;
   }
   .toggle-menu-wrapper {
     display: none;
@@ -1122,6 +1152,8 @@ nav ul {
     flex-grow: 1;
     display: flex;
     justify-content: end;
+    border: none;
+    padding: 0;
   }
   section .section-content {
     grid-template-columns: repeat(2, 1fr);
