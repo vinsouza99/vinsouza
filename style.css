@@ -6,9 +6,10 @@
   --primaryColor: rgba(0, 30, 54, 1);
   --secondaryColor: rgba(0, 116, 189, 1);
   --lighterSecondaryColor: rgb(31, 159, 239);
+  --secondaryColorGlow: rgba(0, 116, 189, 0.65);
   --tertiaryColor: rgba(219, 239, 236, 1);
   --accentColor: rgba(0, 198, 185, 1);
-  --accentColorGlow: rgba(0, 198, 185, 0.5);
+  --accentColorGlow: rgba(0, 198, 185, 0.65);
 }
 ::selection {
   background: var(--secondaryColor); /* Light greenish-blue background */
@@ -487,14 +488,18 @@ nav ul {
 #about .img-wrapper img {
   mix-blend-mode: luminosity;
   border-radius: 10px;
-  box-shadow: 10px 10px 0 var(--secondaryColor);
 }
 #about .img-wrapper {
   display: flex;
   justify-content: center;
   height: 100%;
   max-height: 80vh;
-  overflow: hidden;
+  overflow: visible;
+}
+#about .box {
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 10px 10px 0 rgb(0, 51, 91);
 }
 /*Skills*/
 #skills {
@@ -548,6 +553,7 @@ nav ul {
 }
 .skills-grid .skill-item img {
   max-width: 55px;
+  margin: auto;
 }
 .skills-grid .skill-item.active,
 .skills-grid .skill-item:hover {
@@ -872,6 +878,21 @@ nav ul {
   max-width: 450px;
   position: relative;
 }
+.experience-item :is(h3, h4) {
+  transition: color 0.3s ease-in-out;
+}
+.experience-item .experience-name {
+  color: var(--accentColorGlow);
+}
+.experience-item:hover .experience-name {
+  color: var(--accentColor);
+}
+.experience-item .experience-place {
+  color: var(--secondaryColorGlow);
+}
+.experience-item:hover .experience-place {
+  color: var(--secondaryColor);
+}
 .experience-item-wrapper {
   display: flex;
   position: relative;
@@ -1119,7 +1140,7 @@ nav ul {
     flex-flow: row nowrap;
     justify-content: space-between;
     background-color: transparent;
-    padding: 1rem 2rem 0 2rem;
+    padding: 0rem 2rem 0 2rem;
   }
   nav ul li a {
     border-top-color: rgba(0, 116, 189, 0) !important;
@@ -1170,7 +1191,7 @@ nav ul {
     grid-column: 1;
     grid-row: 1;
     z-index: 2;
-    /*background-color: rgba(0, 30, 54, .7);*/
+    padding-right: 1rem;
   }
   #about .grid-item:nth-child(2) {
     grid-column: 1/-1;
@@ -1182,7 +1203,16 @@ nav ul {
     align-items: center;
   }
   /*Skills*/
-
+  #skills .skills-grid {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  #skills .skills-grid .img-wrapper {
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    align-content: center;
+  }
   #skills .section-content {
     grid-template-rows: 50px auto;
     grid-template-columns: repeat(2, 1fr);
@@ -1400,6 +1430,9 @@ nav ul {
   .experience-grid .tags {
     opacity: 0;
     transition: all 0.2s ease-in-out;
+  }
+  .experience-grid .experience-details.show .experience-name {
+    color: var(--accentColor);
   }
   .experience-grid .experience-details.show .experience-description {
     opacity: 1;
