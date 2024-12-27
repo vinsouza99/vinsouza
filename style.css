@@ -402,7 +402,7 @@ nav ul {
 #home .text-wrapper {
   display: flex;
   flex-flow: column;
-  padding-top: 10vh;
+  padding-top: 20vh;
 }
 #home :is(.social-links, .other-info) {
   opacity: 0;
@@ -458,7 +458,7 @@ nav ul {
 #home .skip-btn-wrapper {
   position: absolute;
   bottom: 8rem;
-  right: 4rem;
+  right: 1.5rem;
   text-align: right;
 }
 #home #skipBtn {
@@ -537,7 +537,7 @@ nav ul {
 .skills-grid .skill-item {
   background-color: transparent;
   border: none;
-  color: var(--accentColor);
+  color: var(--accentColorGlow);
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -1175,6 +1175,9 @@ nav ul {
     justify-content: end;
     border: none;
     padding: 0;
+  }
+  #home .skip-btn-wrapper {
+    right: 4rem;
   }
   section .section-content {
     grid-template-columns: repeat(2, 1fr);
