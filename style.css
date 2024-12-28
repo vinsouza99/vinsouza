@@ -60,9 +60,10 @@ body {
   overflow-x: hidden;
 }
 html {
-  /*overflow: hidden;*/
   overflow: hidden;
+  scroll-snap-type: y mandatory;
 }
+
 h1,
 h2,
 h3 {
@@ -112,9 +113,6 @@ header img:hover {
     brightness(97%) contrast(101%)
     drop-shadow(0px 0px 8px rgba(0, 198, 185, 0.4));
 }
-main {
-  overflow-y: hidden;
-}
 
 nav ul li {
   text-align: center;
@@ -140,7 +138,7 @@ a:not(#resume-link, .card).active,
 }
 section {
   padding: 1rem 2rem;
-  scroll-snap-type: y mandatory;
+  scroll-snap-align: start;
 }
 section:not(#home) {
   max-width: 1200px;
@@ -942,7 +940,7 @@ nav ul {
   transition: all 0.4s ease-in-out;
 }
 .experience-grid .experience-details p {
-  padding-right: 0.5rem;
+  padding-right: 0.15rem;
   font-size: 0.9rem;
 }
 .experience-grid .experience-details p a {
@@ -1439,7 +1437,7 @@ nav ul {
   }
   .experience-grid .experience-details.show .experience-description {
     opacity: 1;
-    height: 140px;
+    height: 200px;
     padding: initial;
     padding-bottom: 1rem;
     padding-right: 0.5rem;
