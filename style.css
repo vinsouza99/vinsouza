@@ -219,6 +219,7 @@ header button {
   border: none;
   font-size: clamp(1rem, 5vw, 1.5rem);
   cursor: pointer;
+  padding: 0;
 }
 .toggle-menu-wrapper button i {
   transition: all 0.5s ease-in-out;
