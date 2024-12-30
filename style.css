@@ -1150,7 +1150,7 @@ nav ul {
   #resume-link {
     border-top-color: rgb(0, 163, 153) !important;
     margin: unset;
-    margin-bottom: 1rem;
+    margin-bottom: 0.25rem;
   }
   .toggle-menu-wrapper {
     display: none;
