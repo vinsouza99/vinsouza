@@ -1438,11 +1438,15 @@ nav ul {
   }
   .experience-grid .experience-details.show .experience-description {
     opacity: 1;
-    height: 200px;
+    height: 150px;
     padding: initial;
     padding-bottom: 1rem;
     padding-right: 0.5rem;
   }
+  .experience-grid .item-4 .experience-details.show .experience-description {
+    height: 200px;
+  }
+
   .experience-grid .experience-details.show .experience-description p {
     overflow-y: auto;
   }
@@ -1462,6 +1466,12 @@ nav ul {
   }
   .experience-grid .experience-details.show .tags {
     opacity: 1;
+  }
+  .experience-grid .experience-details .tags {
+    height: 0;
+  }
+  .experience-grid .row:not(.item-4) .experience-details .tags {
+    height: auto;
   }
   .experience-grid :is(.item-2, .item-4) .experience-details.show {
     padding-bottom: 3.5rem;
