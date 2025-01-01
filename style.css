@@ -1217,7 +1217,7 @@ nav ul {
   }
   #skills .section-content {
     grid-template-rows: 50px auto;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 2fr;
   }
   #portfolio .grid-item .grid-wrapper::before {
     left: 0;
