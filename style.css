@@ -1366,9 +1366,6 @@ nav ul {
     padding-top: 0.5rem;
     grid-row: 2;
   }
-  .experience-grid .experience-details {
-    padding-right: 1rem;
-  }
   .experience-grid .experience-details:hover {
     cursor: pointer;
   }
