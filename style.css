@@ -1382,16 +1382,6 @@ nav ul {
     opacity: 1;
   }
   .experience-grid .experience-details .experience-description::after {
-    /*
-    display: block;
-    width: 100%;
-    content: "";
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: -1px;
-    height: 25px;
-    */
     content: "";
     position: absolute;
     bottom: -1px;
