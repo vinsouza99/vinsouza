@@ -42,6 +42,7 @@
             <li><a href="#skills" id="skills-link">Skills</a></li>
             <li><a href="#portfolio" id="portfolio-link">Portfolio</a></li>
             <li><a href="#experience" id="experience-link">Experience</a></li>
+            <li><a href="#education" id="education-link">Education</a></li>
             <li><a href="#contact" id="contact-link">Contact</a></li>
             <li>
               <a
@@ -235,7 +236,7 @@
                     </div>
                     <span>JavaScript</span>
                   </button>
-                  <!--
+
                   <button class="skill-item active" tags="language">
                     <div class="img-wrapper">
                       <img
@@ -245,7 +246,7 @@
                     </div>
                     <span>TypeScript</span>
                   </button>
-                  -->
+
                   <button class="skill-item active" tags="language">
                     <div class="img-wrapper">
                       <img src="./assets/images/java.svg" alt="Java" />
@@ -264,21 +265,6 @@
                     </div>
                     <span>C#</span>
                   </button>
-                  <!--
-                  <button class="skill-item active" tags="language">
-                    <div class="img-wrapper">
-                      <img src="./assets/images/kotlin.svg" alt="Kotlin" />
-                    </div>
-                    <span>Kotlin</span>
-                  </button>
-                  <button class="skill-item active" tags="language">
-                    <div class="img-wrapper">
-                      <img src="./assets/images/swift.svg" alt="Swift" />
-                    </div>
-                    <span>Swift</span>
-                  </button>
-                                  -->
-
                   <button class="skill-item active" tags="frontend">
                     <div class="img-wrapper">
                       <img src="./assets/images/angular.svg" alt="Angular" />
@@ -342,6 +328,12 @@
                     </div>
                     <span>NoSQL</span>
                   </button>
+                  <button class="skill-item active" tags="backend">
+                    <div class="img-wrapper">
+                      <img src="./assets/images/aws.svg" alt="AWS" />
+                    </div>
+                    <span>AWS</span>
+                  </button>
                   <button class="skill-item active" tags="design">
                     <div class="img-wrapper">
                       <img src="./assets/images/figma.svg" alt="Figma" />
@@ -371,6 +363,15 @@
                       <img src="./assets/images/git.svg" alt="Git" />
                     </div>
                     <span>Git</span>
+                  </button>
+                  <button class="skill-item active" tags="other">
+                    <div class="img-wrapper">
+                      <img
+                        src="./assets/images/jwt.svg"
+                        alt="JSON Web Tokens"
+                      />
+                    </div>
+                    <span>JWT</span>
                   </button>
                   <!--
                   <button class="skill-item active" tags="other">
@@ -531,52 +532,38 @@
                   </div>
                 </div>
               </div>
-              <div class="portfolio-item-container">
+              <div class="portfolio-item-container" id="drivebuddy">
                 <div class="portfolio-item card top3">
                   <div class="thumbnail-wrapper">
-                    <img src="./assets/images/JSnake.png" alt="Item" />
+                    <img src="./assets/images/drivebuddy.png" alt="Item" />
                   </div>
                   <div class="details">
                     <div class="title">
                       <h3>
                         <a
-                          href="https://github.com/vinsouza99/jsnake"
+                          href="https://github.com/cre8-capstone-project/DriverBuddy"
                           target="_blank"
-                          >JSnake
+                          >DriveBuddy
                           <i class="fa-solid fa-arrow-up-right-from-square"></i
                         ></a>
                       </h3>
-                      <span class="type">Web</span>
+                      <span class="type">Web & Mobile</span>
                     </div>
                     <div class="description">
                       <p>
-                        JSnake is a website where you can play the classic snake
-                        game written in JavaScript. Not only it gives the brief
-                        history of the snake game, but it allows recording high
-                        scores on a leaderboard to compete with other users.
-                        <br /><br />
-                        Despite being a fairly simple project, this is a very
-                        special one for me because it was the first full-stack
-                        web application I fully designed and developed when I
-                        started learning web development by myself. Moreover, it
-                        has many of the most important features of a modern
-                        website, such as user accounts, user settings
-                        management, data storing, pagination, and resposiveness.
-                        To challenge me even more, I coded the game to have 2
-                        levels of difficulty and 2 colors themes and keep track
-                        of high scores on a leaderboard.
-                        <br /><br />
-                        This was my final project for the Harvard's CS50 Web
-                        Programming with Python and JavaScript Professional
-                        Certificate program. It not only helped me to earn the
-                        certificate, but more importantly it made me realize
-                        that web development is the career path I wanted to
-                        follow. We were required to make a screen recording
-                        showing the most important features of the app, and you
-                        can check mine
-                        <a href="https://youtu.be/x7YvOk6O7f8" target="_blank"
-                          >here</a
-                        >
+                        DriveBuddy is an AI-powered mobile app designed to help
+                        drivers stay safe by detecting early signs of
+                        drowsiness. Face and eye monitoring technology tracks
+                        signs like frequent blinking or closed eyes. Instant
+                        sound and voice alerts notify drivers when signs of
+                        fatigue are detected. Nearby rest stop suggestions
+                        encourage timely breaks to recharge. Administrator
+                        Dashboard provides real-time insights into driver
+                        safety, alerting companies to potential risks before
+                        they become incidents.<br /><br />
+                        I had the honour to serve as the development lead once
+                        again for this project, which was our capstone project
+                        for Langara's Post-Degree diploma.
                       </p>
                     </div>
 
@@ -586,19 +573,33 @@
                       </button>
                     </div>
                     <div class="tags">
-                      <div class="tag" tags="web,html"><span>HTML</span></div>
-                      <div class="tag" tags="web,css"><span>CSS</span></div>
+                      <div class="tag" tags="mobile,react-native">
+                        <span>React Native</span>
+                      </div>
+                      <div class="tag" tags="web,css"><span>Android</span></div>
                       <div class="tag" tags="web,javascript">
                         <span>JavaScript</span>
                       </div>
                       <div class="tag" tags="web">
-                        <span>Python</span>
+                        <span>React</span>
                       </div>
                       <div class="tag" tags="web">
-                        <span>Django</span>
+                        <span>JWT</span>
+                      </div>
+                      <div class="tag" tags="web">
+                        <span>Nginx</span>
+                      </div>
+                      <div class="tag" tags="web">
+                        <span>AWS</span>
                       </div>
                       <div class="tag" tags="web">
                         <span>SQL</span>
+                      </div>
+                      <div class="tag" tags="web">
+                        <span>Firebase</span>
+                      </div>
+                      <div class="tag" tags="web">
+                        <span>SCRUM</span>
                       </div>
                     </div>
                   </div>
@@ -726,18 +727,15 @@
                 <div class="portfolio-item-container">
                   <div class="portfolio-item card">
                     <div class="thumbnail-wrapper">
-                      <img
-                        src="./assets/images/react-control-system.png"
-                        alt="Item"
-                      />
+                      <img src="./assets/images/JSnake.png" alt="Item" />
                     </div>
                     <div class="details">
                       <div class="title">
                         <h3>
                           <a
-                            href="https://github.com/vinsouza99/React-Control-System"
+                            href="https://github.com/vinsouza99/jsnake"
                             target="_blank"
-                            >React Control System
+                            >JSnake
                             <i
                               class="fa-solid fa-arrow-up-right-from-square"
                             ></i
@@ -746,11 +744,10 @@
                         <span class="type">Web</span>
                       </div>
                       <p class="description">
-                        This was my first React app I built as part of a Udemy
-                        course some years ago. Despite being simple, it taught
-                        me the most important concepts and practices related to
-                        React, and this knowledge was extremely helpful on my
-                        future endeavours.
+                        JSnake is a website where you can play the classic snake
+                        game written in JavaScript. This was my final project
+                        for the Harvard's CS50 Web Programming with Python and
+                        JavaScript Professional Certificate program.
                       </p>
                       <div class="tags">
                         <div class="tag" tags="web,html"><span>HTML</span></div>
@@ -758,11 +755,14 @@
                         <div class="tag" tags="web,javascript">
                           <span>JavaScript</span>
                         </div>
-                        <div class="tag" tags="web,react">
-                          <span>React</span>
+                        <div class="tag" tags="web">
+                          <span>Python</span>
                         </div>
                         <div class="tag" tags="web">
-                          <span>NodeJS</span>
+                          <span>Django</span>
+                        </div>
+                        <div class="tag" tags="web">
+                          <span>SQL</span>
                         </div>
                       </div>
                     </div>
@@ -837,22 +837,20 @@
                 <div class="experience-item">
                   <div class="experience-type">
                     <div class="img-wrapper">
-                      <img src="./assets/images/type-education.svg" alt="" />
+                      <img
+                        src="./assets/images/type-work.svg"
+                        alt=""
+                        aria-hidden="true"
+                      />
                     </div>
                     <div class="line"></div>
                     <div class="year">
-                      <span>2024</span>
+                      <span>2025</span>
                     </div>
                   </div>
                   <div class="experience-details show">
-                    <h3 class="experience-name">
-                      Post Degree in Web & Mobile App Design & Development
-                    </h3>
+                    <h3 class="experience-name">Full-Stack Web Developer</h3>
                     <h4 class="experience-place">Langara College, Canada</h4>
-                    <h4 class="experience-perk">
-                      <i class="fa-solid fa-star"></i> 3<span>&times;</span>
-                      Dean's Honour Roll
-                    </h4>
                     <div class="experience-description">
                       <p>
                         Currently I'm pursuing this Post-Degree Diploma program
@@ -860,24 +858,17 @@
                         Spring 2025. The tech stack I'm learning ranges from
                         design software (Figma, Photoshop) to modern web
                         frameworks such as React and CMS tools like Wordpress.
-                        <br /><br />
-                        However, the most valuable skills I'm gaining aside from
-                        the technical ones are project management related. I had
-                        the opportunity to serve as the development lead for
-                        <a href="#bodybuddy">BodyBuddy</a> for the first time
-                        and this experience had an unvaluable impact on my
-                        personal and professional development.
                       </p>
                     </div>
                     <div class="tags">
                       <div class="tag">WordPress</div>
-                      <div class="tag">UX/UI</div>
-                      <div class="tag">Firebase</div>
-                      <div class="tag">Kotlin</div>
-                      <div class="tag">Swift</div>
-                      <div class="tag">React</div>
-                      <div class="tag">React Native</div>
-                      <div class="tag">Project Management</div>
+                      <div class="tag">Next.js</div>
+                      <div class="tag">AWS</div>
+                      <div class="tag">Headless CMS</div>
+                      <div class="tag">React.js</div>
+                      <div class="tag">JavaScript</div>
+                      <div class="tag">GraphQL</div>
+                      <div class="tag">Apollo</div>
                     </div>
                   </div>
                 </div>
@@ -888,7 +879,48 @@
                 <div class="experience-item">
                   <div class="experience-type">
                     <div class="img-wrapper">
-                      <img src="./assets/images/type-work.png" alt="" />
+                      <img
+                        src="./assets/images/type-work.svg"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                    </div>
+                    <div class="line"></div>
+                    <div class="year">
+                      <span>2024</span>
+                    </div>
+                  </div>
+                  <div class="experience-details">
+                    <h3 class="experience-name">
+                      Volunteer Lead WordPress Developer
+                    </h3>
+                    <h4 class="experience-place">Vancouver, Canada</h4>
+                    <div class="experience-description">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Voluptatibus eligendi iste cum consectetur fuga
+                        sit dolore voluptate possimus incidunt provident.
+                      </p>
+                    </div>
+                    <div class="tags">
+                      <div class="tag">WordPress</div>
+                      <div class="tag">HTML</div>
+                      <div class="tag">CSS</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row item-2">
+              <div class="experience-item-wrapper">
+                <div class="experience-item">
+                  <div class="experience-type">
+                    <div class="img-wrapper">
+                      <img
+                        src="./assets/images/type-work.png"
+                        alt=""
+                        aria-hidden="true"
+                      />
                     </div>
                     <div class="line"></div>
                     <div class="year">
@@ -929,12 +961,16 @@
                 </div>
               </div>
             </div>
-            <div class="row item-2">
+            <div class="row item-1">
               <div class="experience-item-wrapper">
                 <div class="experience-item">
                   <div class="experience-type">
                     <div class="img-wrapper">
-                      <img src="./assets/images/type-work.svg" alt="" />
+                      <img
+                        src="./assets/images/type-work.svg"
+                        alt=""
+                        aria-hidden="true"
+                      />
                     </div>
                     <div class="line"></div>
                     <div class="year">
@@ -981,6 +1017,134 @@
                       <div class="tag">JSP</div>
                       <div class="tag">Primefaces</div>
                       <div class="tag">Software Engineering</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="education" class="fade-in-section">
+        <div class="section-content">
+          <div class="experience-grid">
+            <div class="wrapper">
+              <h2>Education</h2>
+              <p class="section-description"></p>
+            </div>
+            <div class="row item-4">
+              <div class="experience-item-wrapper">
+                <div class="experience-item">
+                  <div class="experience-type">
+                    <div class="img-wrapper">
+                      <img src="./assets/images/type-education.svg" alt="" />
+                    </div>
+                    <div class="line"></div>
+                    <div class="year">
+                      <span>2024 - 2025</span>
+                    </div>
+                  </div>
+                  <div class="experience-details show">
+                    <h3 class="experience-name">
+                      Post Degree in Web & Mobile App Design & Development
+                    </h3>
+                    <h4 class="experience-place">Langara College, Canada</h4>
+                    <h4 class="experience-perk">
+                      <i class="fa-solid fa-star"></i> 3<span>&times;</span>
+                      Dean's Honour Roll
+                    </h4>
+                    <div class="experience-description">
+                      <p>
+                        Currently I'm pursuing this Post-Degree Diploma program
+                        at Langara College with the expected graduation being
+                        Spring 2025. The tech stack I'm learning ranges from
+                        design software (Figma, Photoshop) to modern web
+                        frameworks such as React and CMS tools like Wordpress.
+                        <br /><br />
+                        However, the most valuable skills I gained aside from
+                        the technical ones were project management related. I
+                        had the opportunity to serve as the development lead for
+                        both
+                        <a href="#bodybuddy">BodyBuddy</a> and
+                        <a href="#drivebuddy">DriveBuddy</a>
+                        and these experiences had an unvaluable impact on my
+                        personal and professional development.
+                        <br /><br />
+                      </p>
+                    </div>
+                    <div class="tags">
+                      <div class="tag">WordPress</div>
+                      <div class="tag">React Native</div>
+                      <div class="tag">AWS</div>
+                      <div class="tag">React</div>
+                      <div class="tag">Figma</div>
+                      <div class="tag">Server Security</div>
+                      <div class="tag">Photoshop</div>
+                      <div class="tag">Project Management</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row item-3">
+              <div class="experience-item-wrapper">
+                <div class="experience-item">
+                  <div class="experience-type">
+                    <div class="img-wrapper">
+                      <img src="./assets/images/type-education.svg" alt="" />
+                    </div>
+                    <div class="line"></div>
+                    <div class="year">
+                      <span>2021</span>
+                    </div>
+                  </div>
+                  <div class="experience-details">
+                    <h3 class="experience-name">
+                      HarvardX CS50's Web Programming with Python and JavaScript
+                    </h3>
+                    <h4 class="experience-place">Online</h4>
+                    <h4 class="experience-perk">
+                      <i class="fa-solid fa-star"></i> Professional Certificate
+                    </h4>
+                    <div class="experience-description">
+                      <p>
+                        This course in the edx platform was my entry point to
+                        the career path of web development. Offered by Harvard's
+                        CS50 program, this course was not only an excellent
+                        introduction to the topic, but it also helped me
+                        discover my passion for app development.<br /><br />
+                        This course dives deeply into the design and
+                        implementation of web apps with Python, JavaScript, and
+                        SQL using frameworks like Django, React, and Bootstrap.
+                        <br /><br />
+                        As part of my final project, I did a very simple but
+                        special website called JSnake, that is detailed in my
+                        portfolio. At the end of that very intense program, I
+                        earned my first professional Certificate, that you can
+                        find
+                        <a
+                          href="https://courses.edx.org/certificates/bc857b54e42d436981747ef17f061d81"
+                          target="_blank"
+                          >here</a
+                        >
+                        <br /><br />
+                      </p>
+                    </div>
+                    <div class="tags">
+                      <div class="tag" tags="web,html"><span>HTML</span></div>
+                      <div class="tag" tags="web,css"><span>CSS</span></div>
+                      <div class="tag" tags="web,javascript">
+                        <span>JavaScript</span>
+                      </div>
+                      <div class="tag" tags="web">
+                        <span>Python</span>
+                      </div>
+                      <div class="tag" tags="web">
+                        <span>Django</span>
+                      </div>
+                      <div class="tag" tags="web">
+                        <span>SQL</span>
+                      </div>
                     </div>
                   </div>
                 </div>

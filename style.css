@@ -4,7 +4,7 @@
 }
 :root {
   --primaryColor: rgba(0, 30, 54, 1);
-  --secondaryColor: rgba(0, 116, 189, 1);
+  --secondaryColor: rgba(0, 141, 230, 1);
   --lighterSecondaryColor: rgb(31, 159, 239);
   --secondaryColorGlow: rgba(0, 116, 189, 0.65);
   --tertiaryColor: rgba(219, 239, 236, 1);
@@ -197,7 +197,7 @@ header nav ul li a {
   transition: all 0.2s ease-in-out;
   border-top: 1px solid rgba(0, 116, 189, 0.3);
   border-bottom: 5px solid rgba(0, 163, 153, 0);
-  padding: 1rem;
+  padding: 1rem 0.5rem;
 }
 header nav ul li :is(a:hover, a.active) {
   color: var(--accentColor);
@@ -964,7 +964,7 @@ nav ul {
   text-transform: capitalize !important;
   font-size: 1rem;
   position: relative;
-  top: -0.4rem;
+  top: -0.1rem;
 }
 .experience-perk i {
   font-size: 0.9rem;
@@ -1151,6 +1151,7 @@ nav ul {
     border-top-color: rgb(0, 163, 153) !important;
     margin: unset;
     margin-bottom: 0.25rem;
+    box-sizing: content-box;
   }
   .toggle-menu-wrapper {
     display: none;
