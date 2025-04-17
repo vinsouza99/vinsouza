@@ -947,6 +947,7 @@ nav ul {
 .experience-grid .experience-details p a {
   color: var(--accentColor);
   text-decoration: none;
+  font-weight: 700;
 }
 .experience-item :is(h3, h4) {
   margin: 0;
