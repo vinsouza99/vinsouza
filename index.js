@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   let activeMenuItem = document.createElement("a");
   const menuItems = document.querySelectorAll("nav ul li a");
   const currentYearSpan = document.getElementById("currentYear");
+  const currentAgeSpan = document.getElementById("currentAge");
 
   const skillItems = Array.from(document.getElementsByClassName("skill-item"));
   const skillFilters = document.querySelectorAll("#skills .button-tag input");
@@ -52,6 +53,17 @@ document.addEventListener("DOMContentLoaded", (e) => {
   }
   skipBtn.addEventListener("click", finishAnimation);
   currentYearSpan.innerText = new Date().getFullYear();
+  const birthDate = new Date("1999-06-24");
+  const today = new Date();
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const monthDifference = today.getMonth() - birthDate.getMonth();
+  if (
+    monthDifference < 0 ||
+    (monthDifference === 0 && today.getDate() < birthDate.getDate())
+  ) {
+    age--;
+  }
+  currentAgeSpan.innerText = age;
 
   window.onscroll = () => {
     var currentSection = "";
