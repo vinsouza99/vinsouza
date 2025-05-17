@@ -1113,12 +1113,14 @@ nav ul {
     box-shadow: 0px 0px 5px var(--accentColorGlow),
       inset 0px 0px 5px var(--accentColorGlow);
   }
+  /*
   .item-4 .experience-type::after {
     content: url("./assets/loading.svg");
     min-width: 38px;
     min-height: 38px;
     border-width: 2px;
   }
+    */
   .experience-item .experience-type .line::before {
     content: "";
     width: 15px;
