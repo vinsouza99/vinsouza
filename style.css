@@ -142,7 +142,7 @@ section {
 }
 section:not(#home) {
   max-width: 1200px;
-  min-height: 100dvh;
+  min-height: 100%;
   margin: auto;
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -477,6 +477,10 @@ nav ul {
   border-color: (--lighterSecondaryColor);
 }
 /*About*/
+#about {
+  min-height: 100% !important;
+  max-height: 650px;
+}
 #about .section-content {
   grid-template-columns: 1fr;
   gap: 1rem;
